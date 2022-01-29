@@ -1,0 +1,109 @@
+
+/* music custom style  */
+.front-page .maps-full {
+	padding-bottom: calc(100vh);
+	z-index: 1;
+}	
+
+.play-btn {
+    left: calc(100vw - 70px);
+    bottom: 122px;
+    width: 50px;
+    height: 50px;
+    background: #4c9e87;
+    border-radius: 40px;
+    text-align: center;
+    -webkit-box-shadow: 6px 2px 52px -5px rgba(76, 158, 135,0.5);
+    -moz-box-shadow: 6px 2px 52px -5px rgba(76, 158, 135,0.5);
+    box-shadow: 6px 2px 52px -5px rgba(76, 158, 135,0.5);
+    z-index: 2;
+}
+
+.play-btn .fa {
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.play-btn button {
+    background-color: transparent;
+}
+.play-btn.muted:after {
+    content: "---";
+    color: #ffdfc8;
+    position: absolute;
+    font-size: 39px;
+    letter-spacing: -23px;
+    width: 79px;
+    left: -8px;
+    transform: rotate(45deg);
+	top: 3px;
+	pointer-events:none; 
+}
+@media only screen and (max-width: 920px) {
+	.front-page .maps-full {
+		padding-bottom: calc(100vh);
+		margin-bottom: -55px;
+	}
+	
+}
+
+/* music custom style  */
+.front-page {
+	/* padding-bottom: calc(100vh); */
+	z-index: 1;
+}	
+
+.play-btn {
+    left: calc(100vw - 70px);
+    position: fixed;
+    bottom: 80px;
+    width: 50px;
+    height: 50px;
+    background: #908348;
+    border-radius: 40px;
+    text-align: center;
+    -webkit-box-shadow: 6px 2px 52px -5px rgb(251, 247, 229);
+    -moz-box-shadow: 6px 2px 52px -5px rgb(251, 247, 229);
+    box-shadow: 6px 2px 52px -5px rgb(251, 247, 229);
+    z-index: 999;
+    cursor: pointer;
+}
+
+.play-btn .fa {
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.play-btn button {
+    background-color: transparent;
+}
+.play-btn.muted:after {
+    content: "---";
+    color: #fbf7e5;
+    position: absolute;
+    font-size: 39px;
+    letter-spacing: -23px;
+    width: 79px;
+    left: -8px;
+    transform: rotate(45deg);
+    top: 3px;
+    pointer-events:none;
+}
+@media only screen and (max-width: 920px) {
+	.front-page .maps-full {
+		padding-bottom: calc(100vh);
+		margin-bottom: -55px;
+	}
+	
+}
+@media only screen and (min-width: 920px) {
+    /* music custom style  */
+    .play-btn {
+        position: absolute;
+        left: calc(50% - 250px);
+        bottom: 25px;
+    }
+    /* end music custom style  */
+}    
