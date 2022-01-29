@@ -1,4 +1,4 @@
-body{font-family: "Aleo";, sans-serif; font-size:14px; background-color:#FFFFFF;}
+body{font-family: "Aleo" !important;, sans-serif; font-size:14px; background-color:#FFFFFF;}
 
 @font-face {
     font-family: "main-icon";

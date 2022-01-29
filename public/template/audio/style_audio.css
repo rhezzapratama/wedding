@@ -83,12 +83,12 @@
     content: "---";
     color: #fbf7e5;
     position: absolute;
-    font-size: 39px;
+    font-size: 50px;
     letter-spacing: -23px;
     width: 79px;
-    left: -8px;
+    left: -17px;
     transform: rotate(45deg);
-    top: 3px;
+    top: -12px;
     pointer-events:none;
 }
 @media only screen and (max-width: 920px) {
