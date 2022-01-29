@@ -59,11 +59,6 @@ class ListTamuController extends Controller
         return response()->json(['success' => 'Data Added successfully.']);
     }
 
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
         if(request()->ajax())
