@@ -22,3 +22,4 @@ Route::post('list-tamu/update', 'ListTamuController@update')->name('list-tamu.up
 Route::get('list-tamu/destroy/{id}', 'ListTamuController@destroy');
 Route::get('komentar', 'KomentarController@home');
 Route::resource('item-ajax', 'KomentarController');
+Route::get('gallery', 'GalleryController@index');
