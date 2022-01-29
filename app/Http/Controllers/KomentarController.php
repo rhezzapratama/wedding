@@ -13,7 +13,6 @@ class KomentarController extends Controller
     {
         $tamu = $request->tamu??'Tamu Undangan';
         $items = Komentar::latest()->paginate(5);
-        dd(response()->json($items));
         return view('komentar', compact('tamu'));
     }
 
