@@ -112,10 +112,17 @@ function getPageData() {
 }
 
 function manageRow(data) {
-var	rows = '';
+    var	rows = '';
+    var my_date_format = function (input) {
+    var d = new Date(Date.parse(input.replace(/-/g, "/")));
+    var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var date = d.getDate().toString() + " " + month[d.getMonth().toString()] + ", " + 
+    d.getFullYear().toString();
+    return (date);
+}; 
 $.each( data, function( key, value ){
     rows = rows + '<div class="media">';
-    rows = rows + '<p class="pull-right"><small>'+value.created_at+'</small></p>';
+    rows = rows + '<p class="pull-right"><small>'+my_date_format(value.created_at)+'</small></p>';
     rows = rows + '<a class="media-left" href="#">';
     rows = rows + '<img src="https://www.seekpng.com/png/full/114-1149972_avatar-free-png-image-avatar-png.png" width="20px">';
     rows = rows + '</a>';

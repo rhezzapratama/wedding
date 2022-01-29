@@ -37,8 +37,8 @@ class ListTamuController extends Controller
     {
         $rules = array(
             'nama' => 'required',
-            'no_tlp' => 'required',
-            'pesan' => 'required'   
+            'no_tlp' => 'required'
+            //'pesan' => 'required'   
         );
 
         $error = Validator::make($request->all(), $rules);
