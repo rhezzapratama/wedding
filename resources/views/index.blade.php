@@ -32,6 +32,7 @@
 	<link rel="stylesheet" href="{{ asset('template/styles-soft-green/style.css') }}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 	<style type="text/css"> 
 	a:hover{
@@ -67,7 +68,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="demo-nav" style="z-index:9 !important;">
+		<div class="demo-nav" style="z-index:99 !important;">
 			<nav class="footer-5-icons">
 				<a href="#index"><i class="ico-home"></i><em>Home</em></a>
 				<a href="#mempelai"><i class="ico-mempelai"></i><em>Mempelai</em></a>
@@ -318,7 +319,9 @@
 										<h5>BCA</h5>
 										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
 										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-bca.jpeg') }}" alt="" style="width:100%">
-										<div style="margin-top:6px;">2100130826</div>
+										<div style="margin-top:6px;">
+											<button class="btn btn-sm btn-outline-dark copy-text" value="2100130826">2100130826</button>
+										</div>
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -326,12 +329,15 @@
 										<h5>OVO</h5>
 										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
 										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-ovo.jpeg') }}" alt="" style="width:100%">
-										<div style="margin-top:6px;">081293129163</div>
+										<div style="margin-top:6px;">
+											<button class="btn btn-sm btn-outline-dark copy-text" value="081293129163">081293129163</button>
+										</div>
 									</div>
 								</div>
 								<div class="col-sm-12 center-text">
-									<div style="margin-top:6px;"></div>
-									<small style="color:#6e7376;">Sebelumnya, kami ucapkan terimakasih atas perhatian dan bentuk tanda cinta Bapak/Ibu/Saudara/i untuk kami</small>
+									<div style="margin-top:6px;">
+										<small style="color:#6e7376;">Sebelumnya, kami ucapkan terimakasih atas perhatian dan bentuk tanda cinta Bapak/Ibu/Saudara/i untuk kami</small>
+									</div>
 								</div>	
 							</div>
 						</div>
@@ -385,11 +391,20 @@
 			$(".splash").attr('style', 'display:none;');
 			playAudio();
 		});
+
+		$(".copy-text").on('click', function() {
+			var copyText = $(this).val();
+			// copyText.select();
+			// copyText.setSelectionRange(0, 99999); /* For mobile devices */
+			navigator.clipboard.writeText(copyText);
+			toastr.success('Berhasil Copy', 'Success Alert', {timeOut: 5000});
+		});
 	</script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </body>
 
 </html>
