@@ -139,7 +139,8 @@
 					</div>
 				</div>
 				<div class="acara center-text">
-					<h3>Akad</h3>
+					<h3><span class="cg" style="padding:2px">A</span><span class="cg" style="padding:2px">k</span><span class="cg" style="padding:2px">a</span><span class="cg" style="padding:2px">d</span></h3>
+					
 					<div class="acara-detail">
 						<div class="kiri">
 							<span class="atas">08.00 - Selesai</span>
@@ -169,7 +170,8 @@
 
 				<br>
 				<div class="acara center-text">
-					<h3>Reception</h3>
+					<h3><span class="cg">R</span><span class="cg">e</span><span class="cg">c</span><span class="cg">e</span><span class="cg">p</span><span class="cg">t</span><span class="cg">i</span><span class="cg">o</span><span class="cg" >n</span>
+					</h3>
 					<div class="acara-detail">
 						<div class="kiri">
 							<span class="atas">11.30 - 13.00</span>
@@ -192,7 +194,11 @@
 				</div>
 				<!-- Display the countdown timer in an element -->
 				<div class="heading-box count">
-					<h3 class="center-text">Our Happy Moment</h3>
+					<h3 class="center-text">
+						<span class="cg" >O</span><span class="cg" >u</span><span class="cg" >r</span>
+						<span class="cg" >H</span><span class="cg" >a</span><span class="cg" >p</span><span class="cg">p</span><span class="cg">y</span><br>
+						<span class="cg">M</span><span class="cg">o</span><span class="cg">m</span><span class="cg">e</span><span class="cg">n</span><span class="cg">t</span>
+					</h3>
 				</div>
 				<div class="">
 					<script>
@@ -251,7 +257,10 @@
 		<div id="gallery" class="page-content-scroll">
 			<!-- virtual wedding start  -->
 			<div class="heading-box">
-				<h3 class="center-text">Prewedding Clip</h3>
+				<h3 class="center-text">
+					<span class="cg">P</span><span class="cg">r</span><span class="cg">e</span><span class="cg">w</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
+					<span class="cg">C</span><span class="cg">l</span><span class="cg">i</span><span class="cg">p</span>
+				</h3>
 				<!-- <span class="center-text">Live Streaming</span> -->
 			</div>
 			<div class="video">
@@ -262,7 +271,10 @@
 			<br><br><br><br>
 			<!-- virtual wedding end  -->
 			<div class="heading-box">
-				<h3 class="center-text">Wedding Gallery</h3>
+				<h3 class="center-text">
+					<span class="cg">W</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
+					<span class="cg">G</span><span class="cg">a</span><span class="cg">l</span><span class="cg">l</span><span class="cg">e</span><span class="cg">r</span><span class="cg">y</span>
+				</h3>
 			</div>
 			<div class="">
 				<amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
@@ -287,7 +299,10 @@
 			</div>
 			<!-- protokol kesehatan start  -->
 			<div class="heading-box count">
-				<h3 class="center-text">Health Protocol</h3>
+				<h3 class="center-text">
+					<span class="cg">H</span><span class="cg">e</span><span class="cg">a</span><span class="cg">l</span><span class="cg">t</span><span class="cg">h</span>
+					<span class="cg">P</span><span class="cg">r</span><span class="cg">o</span><span class="cg">t</span><span class="cg">o</span><span class="cg">c</span><span class="cg">o</span><span class="cg">l</span>
+				</h3>
 			</div>
 			<div class="content center-text">
 				Tanpa mengurangi rasa hormat, sesuai dengan peraturan pemerintah, para tamu undangan tetap wajib menjalankan protokol kesehatan sebagaimana mestinya.<br><br>
@@ -298,12 +313,15 @@
 			<!-- protokol kesehatan end  -->
 			<!-- wedding gift -->
 			<div class="heading-box count">
-				<h3 class="center-text">Wedding Gift</h3>
+				<h3 class="center-text">
+					<span class="cg">W</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
+					<span class="cg">G</span><span class="cg">i</span><span class="cg">f</span><span class="cg">t</span>
+				</h3>
 			</div>
 			<div class="lihat-btn center-text" data-toggle="modal" data-target="#modalContoh" data-backdrop="static" data-keyboard="false">
 				<p><i class="fa fa-gift"></i> Send Gift</p>
 			</div>
-			<div class="modal animated zoomInDown" id="modalContoh" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade" id="modalContoh" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog" style="overflow-y: initial !important" role="document">
 					<div class="modal-content">
 						<div class="modal-header text-light" style="background-color:#9a8569;">
@@ -347,7 +365,9 @@
 			<!-- wedding gift end -->
 		</div>
 		<div class="heading-box">
-			<h3 class="center-text">Wishes</h3>
+			<h3 class="center-text">
+				<span class="cg">W</span><span class="cg">i</span><span class="cg">s</span><span class="cg">h</span><span class="cg">e</span><span class="cg">s</span>
+			</h3>
 			<span class="center-text color-black"></span>
 		</div>
 		<div class="content">
@@ -401,6 +421,13 @@
 			navigator.clipboard.writeText(copyText);
 			toastr.success('Berhasil Copy', 'Success Alert', {timeOut: 5000});
 		});
+
+		$('.modal').on('show.bs.modal', function (e) {
+     		$('.modal .modal-dialog').attr('class', 'modal-dialog  animated zoomInDown');
+		})
+  		$('.close').on('hide.bs.modal', function (e) {
+   			$('.modal .modal-dialog').attr('class', 'modal-dialog  animated flipOutX animate__delay-10s');
+		})
 	</script>
 </body>
 
