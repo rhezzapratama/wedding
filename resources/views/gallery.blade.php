@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@4/dist/css/bootstrap.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="{{ asset('template/gallery/dist/viewer.css')}}">
+<link rel="stylesheet" href="{{ asset('template/gallery/dist/viewer.css') }}">
 <style>
 * {
   box-sizing: border-box;
@@ -39,6 +39,26 @@ body {
   vertical-align: middle;
 }
 
+.pictures {
+      list-style: none;
+      margin: 0;
+      max-width: 30rem;
+      padding: 0;
+    }
+
+    .pictures > li {
+      border: 1px solid transparent;
+      float: left;
+      height: calc(100% / 3);
+      margin: 0 -1px -1px 0;
+      overflow: hidden;
+      width: calc(100% / 3);
+    }
+
+    .pictures > li > img {
+      cursor: zoom-in;
+      width: 100%;
+    }
 </style>
 </head>
 <body>
@@ -53,46 +73,48 @@ body {
 </div> -->
 
 <!-- Photo Grid -->
-<div class="row" id="galley">
+<div class="row"> 
+<div id="gallery">
   <div class="column">
-    <img data-original="https://www.w3schools.com/w3images/wedding.jpg" src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/rocks.jpg" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/falls2.jpg" src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/paris.jpg" src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/nature.jpg" src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/mist.jpg" src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/paris.jpg" src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
   </div>
   <div class="column">
-    <img data-original="https://www.w3schools.com/w3images/underwater.jpg" src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/ocean.jpg" src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/wedding.jpg" src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/mountainskies.jpg" src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/rocks.jpg" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/underwater.jpg" src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
   </div>  
   <div class="column">
-  <img data-original="https://www.w3schools.com/w3images/wedding.jpg" src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/rocks.jpg" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/falls2.jpg" src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/paris.jpg" src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/nature.jpg" src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/mist.jpg" src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/paris.jpg" src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
   </div>
   <div class="column">
-  <img data-original="https://www.w3schools.com/w3images/underwater.jpg" src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/ocean.jpg" src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/wedding.jpg" src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/mountainskies.jpg" src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/rocks.jpg" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/underwater.jpg" src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+</div>
   </div>
 </div>
 
 <script src="https://unpkg.com/jquery@3/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/bootstrap@4/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="{{ asset('template/gallery/dist/viewer.js') }}"></script>
+  <script src="https://unpkg.com/bootstrap@4/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="{{ asset('template/gallery/dist/viewer.js') }}"></script>
 
 <script>
 // Get the elements with class="column"
@@ -135,20 +157,16 @@ function two() {
 //     this.className += " active";
 //   });
 // }
-
-</script>
-<script>
-    window.addEventListener('DOMContentLoaded', function () {
-      var galley = document.getElementById('galley');
-      var viewer = new Viewer(galley, {
+window.addEventListener('DOMContentLoaded', function () {
+      var gallery = document.getElementById('gallery');
+      var viewer = new Viewer(gallery, {
         url: 'data-original',
         title: function (image) {
           return image.alt + ' (' + (this.index + 1) + '/' + this.length + ')';
         },
       });
     });
-  </script>
-
+</script>
 
 </body>
 </html>
