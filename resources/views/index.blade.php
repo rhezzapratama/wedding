@@ -52,7 +52,7 @@
 				<div class="heading-box">
 					<span>The Wedding of </span>
 					<h3>Ayu & Reza</h3>
-					<span>10 February 2023<br>08.00</span>
+					<span>12 February 2023<br>08.00</span>
 				</div>
 			</div>
 			<div class="nama-box center-text">
@@ -90,7 +90,7 @@
 				</h4>
 				<h4 class="date center-text uppercase">
 					<span>Feb</span>
-					<span>10</span>
+					<span>12</span>
 					<span>2023</span>
 				</h4>
 				<div class="img-leaf">
@@ -147,7 +147,7 @@
 						</div>
 						<div class="tengah">
 							<span class="top uppercase">Feb</span>
-							<span class="midle">10</span>
+							<span class="midle">12</span>
 							<span class="down">2023</span>
 						</div>
 						<div class="kanan">
@@ -177,7 +177,7 @@
 						</div>
 						<div class="tengah">
 							<span class="top uppercase">Feb</span>
-							<span class="midle">10</span>
+							<span class="midle">12</span>
 							<span class="down">2023</span>
 						</div>
 						<div class="kanan">
@@ -197,7 +197,7 @@
 				<div class="">
 					<script>
 						// Bulan - Tgl - Tahun
-						CountDownTimer('02/10/2023', 'countdate');
+						CountDownTimer('02/12/2023', 'countdate');
 
 						function CountDownTimer(dt, id) {
 							var end = new Date(dt);
