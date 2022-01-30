@@ -292,12 +292,9 @@
 				Tanpa mengurangi rasa hormat, sesuai dengan peraturan pemerintah, para tamu undangan tetap wajib menjalankan protokol kesehatan sebagaimana mestinya.<br><br>
 				Pastikan kondisi badan dalam keadaan sehat saat menghadiri undangan. <br>
 				Terimakasih atas kerjasama Bapak/Ibu/Saudara/i.
-
-				<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/covid-icon.png') }}" width="356" height="111" layout="responsive">
-				</amp-img>
+				<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/covid-icon.png') }}" width="356" height="111" layout="responsive"></amp-img>
 			</div>
 			<!-- protokol kesehatan end  -->
-
 			<!-- wedding gift -->
 			<div class="heading-box count">
 				<h3 class="center-text">Wedding Gift</h3>
@@ -358,7 +355,6 @@
 				Dibuat dengan sepenuh hati :)
 			</div>
 		</div>
-	</div>
 		<!-- End More -->
 	</div>
 
