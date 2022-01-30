@@ -53,6 +53,7 @@ body {
 </div> -->
 
 <!-- Photo Grid -->
+<div class="container">
 <div class="row" id="galley">
   <div class="column">
     <img data-original="https://www.w3schools.com/w3images/wedding.jpg" src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
@@ -88,6 +89,7 @@ body {
     <img data-original="https://www.w3schools.com/w3images/rocks.jpg" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
     <img data-original="https://www.w3schools.com/w3images/underwater.jpg" src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
   </div>
+</div>
 </div>
 
 <script src="https://unpkg.com/jquery@3/dist/jquery.slim.min.js" crossorigin="anonymous"></script>

@@ -24,11 +24,11 @@ body {
         <div class="col-md-12">
             <form data-toggle="validator" action="{{ route('item-ajax.store') }}" method="POST">
                 <div class="form-group">
-                    <textarea type="text" name="ucapan" id="ucapan" class="form-control" rows="4" placeholder="Tulisan ucapan kalian disini ..." max-length="100" data-error="Please enter title." required></textarea>
+                    <textarea type="text" name="ucapan" id="ucapan" class="form-control" rows="4" placeholder="Tulisan ucapan kalian disini ..." maxlength="100" data-error="Please enter title." required></textarea>
                     <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="nama" id="nama" class="form-control" readonly data-error="Please enter title." required value="{{$tamu}}" />
+                    <input type="text" name="nama" id="nama" class="form-control" readonly data-error="Please enter title." maxlength="100" required value="{{$tamu}}" />
                     <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
@@ -122,12 +122,11 @@ function manageRow(data) {
 }; 
 $.each( data, function( key, value ){
     rows = rows + '<div class="media">';
-    rows = rows + '<p class="pull-right"><small>'+my_date_format(value.created_at)+'</small></p>';
     rows = rows + '<a class="media-left" href="#">';
     rows = rows + '<img src="https://www.seekpng.com/png/full/114-1149972_avatar-free-png-image-avatar-png.png" width="20px">';
     rows = rows + '</a>';
     rows = rows + '<div class="media-body">';
-    rows = rows + '<h4 class="media-heading user_name">'+value.nama+'</h4>';
+    rows = rows + '<h4 class="media-heading user_name">'+value.nama+'<p class="pull-right"><small>'+my_date_format(value.created_at)+'</small></p></h4>';
     rows = rows + ''+value.ucapan+'';
     rows = rows + '<p><small>Will you attend our wedding ? '+value.kehadiran+'</small></p>';
     rows = rows + '</div>';

@@ -1875,7 +1875,7 @@ font-size: 20px;
 .nama-box .nama {
     border: 2px solid #9a8568;
     padding: 40px 10px;
-    margin: 5px 20px;
+    margin: 5px 31px;
     border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
@@ -1897,7 +1897,7 @@ font-size: 20px;
 .splash .heading-box {
     padding: 50px 0;
 }
-.lihat-btn a {
+.lihat-btn a, .lihat-btn p {
     background: #9a8569;
     padding: 10px;
     margin: 10px 20px;
@@ -1908,7 +1908,7 @@ font-size: 20px;
 
 @media only screen and (min-width: 920px) {
 .splash {
-    max-width: 360px;
+    max-width: 352px;
     margin: 0;
     overflow: hidden;
 }}

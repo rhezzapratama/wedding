@@ -67,7 +67,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="demo-nav">
+		<div class="demo-nav" style="z-index:9 !important;">
 			<nav class="footer-5-icons">
 				<a href="#index"><i class="ico-home"></i><em>Home</em></a>
 				<a href="#mempelai"><i class="ico-mempelai"></i><em>Mempelai</em></a>
@@ -302,24 +302,27 @@
 			<div class="heading-box count">
 				<h3 class="center-text">Wedding Gift</h3>
 			</div>
-			<div class="lihat-btn center-text" data-toggle="modal" data-target="#modalContoh">
-				<a href="#"><i class="fa fa-gift"></i> Send Gift</a>
+			<div class="lihat-btn center-text" data-toggle="modal" data-target="#modalContoh" data-backdrop="static" data-keyboard="false">
+				<p><i class="fa fa-gift"></i> Send Gift</p>
 			</div>
 			<div class="modal animated zoomIn" id="modalContoh" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog" role="document">
+				<div class="modal-dialog" style="overflow-y: initial !important" role="document">
 					<div class="modal-content">
 						<div class="modal-header text-light" style="background-color:#9a8569;">
 							<h5 class="modal-title">Send Gift</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          						<span aria-hidden="true">&times;</span>
+        					</button>
 						</div>
-						<div class="modal-body">
+						<div class="modal-body" style="height: 400px; overflow-y: auto;">
 							<div class="row">
-								<div class="col-sm-6" style="background-color:lavender;">.col-sm-6</div>
-								<div class="col-sm-6" style="background-color:lavenderblush;">.col-sm-6</div>
+								<div class="col-sm-6">
+									<img src="https://www.w3schools.com/w3images/rocks.jpg" alt="" style="width:100%">
+								</div>
+								<div class="col-sm-6">
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT32It8F32bLl9Bo1VsCYMWlheFFBFsTELwBEQwZDugr-J_uWNHkKqqL12PANTyc8kzyJo&usqp=CAU" alt="" style="width:100%">
+								</div>
 							</div>
-						</div>
-						<div class="modal-footer lihat-btn" data-dismiss="modal">
-							<a href="#"><i></i>Tutup</a>
-
 						</div>
 					</div>
 				</div>
@@ -351,8 +354,7 @@
 
 	<!-- /* music custom style  */ -->
 	<audio id="myAudio" class="center-text" loop>
-		<source src="https://akad.wedding/demo/soft-green/audio/backsound.ogg" type="audio/ogg">
-		<source src="https://akad.wedding/demo/soft-green/audio/backsound.mp3" type="audio/mp3">
+		<source src="{{asset('template/audio/backsoundbeautiful.mp3')}}" type="audio/mp3">
 		Your browser does not support the audio element.
 	</audio>
 	<div id="play-btn" class="play-btn muted">
