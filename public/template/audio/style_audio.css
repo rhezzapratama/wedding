@@ -101,7 +101,7 @@
 @media only screen and (min-width: 920px) {
     /* music custom style  */
     .play-btn {
-        position: absolute;
+        position: fixed;
         left: calc(50% - 250px);
         bottom: 25px;
     }
