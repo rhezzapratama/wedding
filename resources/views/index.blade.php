@@ -317,38 +317,48 @@
 						<div class="modal-body" style="height: 400px; overflow-y: auto;">
 							<div class="row">
 								<div class="col-sm-6">
-									<img src="https://www.w3schools.com/w3images/rocks.jpg" alt="" style="width:100%">
+									<div class="img center-text">
+										<h5>BCA</h5>
+										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
+										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-bca.jpeg') }}" alt="" style="width:100%">
+										<div style="margin-top:6px;">2100130826</div>
+									</div>
 								</div>
 								<div class="col-sm-6">
-									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT32It8F32bLl9Bo1VsCYMWlheFFBFsTELwBEQwZDugr-J_uWNHkKqqL12PANTyc8kzyJo&usqp=CAU" alt="" style="width:100%">
+									<div class="img center-text">
+										<h5>OVO</h5>
+										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
+										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-ovo.jpeg') }}" alt="" style="width:100%">
+										<div style="margin-top:6px;">081293129163</div>
+									</div>
 								</div>
+								<div class="col-sm-12 center-text">
+									<div style="margin-top:6px;"></div>
+									<small style="color:#6e7376;">Sebelumnya, kami ucapkan terimakasih atas perhatian dan bentuk tanda cinta Bapak/Ibu/Saudara/i untuk kami</small>
+								</div>	
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
 			<!-- wedding gift end -->
-
-			<div class="heading-box">
-				<h3 class="center-text">Wishes</h3>
-				<span class="center-text color-black"></span>
-			</div>
-			<div class="content">
-				<amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
-				<div class="gallery gallery-square full-bottom">
-					{{-- <iframe src="https://akad.wedding/wishes-DianAdenWedding" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">
-					Your browser doesn't support. try using chrome browser !
-				</iframe> --}}
-					<iframe src="{{url('komentar?tamu='.$tamu)}}" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">Your browser isn't compatible</iframe>
-				</div>
-			</div>
-			<div class="footer-akad content">
-				<div class="center-text">
-					Dibuat dengan sepenuh hati :)
-				</div>
+		</div>
+		<div class="heading-box">
+			<h3 class="center-text">Wishes</h3>
+			<span class="center-text color-black"></span>
+		</div>
+		<div class="content">
+			<amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
+			<div class="gallery gallery-square full-bottom">
+				<iframe src="{{url('komentar?tamu='.$tamu)}}" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">Your browser isn't compatible</iframe>
 			</div>
 		</div>
+		<div class="footer-akad content">
+			<div class="center-text">
+				Dibuat dengan sepenuh hati :)
+			</div>
+		</div>
+	</div>
 		<!-- End More -->
 	</div>
 
