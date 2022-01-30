@@ -52,7 +52,7 @@
 				<div class="heading-box">
 					<span>The Wedding of </span>
 					<h3>Ayu & Reza</h3>
-					<span>11 December 2020<br>19.00</span>
+					<span>10 February 2023<br>08.00</span>
 				</div>
 			</div>
 			<div class="nama-box center-text">
@@ -89,9 +89,9 @@
 					Date
 				</h4>
 				<h4 class="date center-text uppercase">
-					<span>Jan</span>
-					<span>04</span>
-					<span>2022</span>
+					<span>Feb</span>
+					<span>10</span>
+					<span>2023</span>
 				</h4>
 				<div class="img-leaf">
 					<amp-img alt="icon leaf" src="{{ asset('template/assets/img/home-leaf.png') }}" width="127" height="129" layout="responsive"></amp-img>
@@ -100,9 +100,9 @@
 				<div class="home-name center-text uppercase">
 					</span> Ayu & Reza <span>
 				</div>
-				<a class="location center-text" href="https://goo.gl/maps/unvtuFX4w4mXdGiJ8">
+				<a class="location center-text" href="https://goo.gl/maps/H7bCbyNA9NU2">
 					<i class="ico-location"></i>
-					<span>Hotel Santika Premiere Hayam Wuruk<br>Jakarta</span>
+					<span>Islamic Centre<br>Bekasi</span>
 				</a>
 			</div>
 		</div>
@@ -139,24 +139,24 @@
 					</div>
 				</div>
 				<div class="acara center-text">
-					<h3>Akad Nikah</h3>
+					<h3>Akad</h3>
 					<div class="acara-detail">
 						<div class="kiri">
 							<span class="atas">08.00 - Selesai</span>
 							<span class="bawah">WIB</span>
 						</div>
 						<div class="tengah">
-							<span class="top uppercase">Jan</span>
-							<span class="midle">04</span>
-							<span class="down">2022</span>
+							<span class="top uppercase">Feb</span>
+							<span class="midle">10</span>
+							<span class="down">2023</span>
 						</div>
 						<div class="kanan">
-							<span class="atas">Grand Ballroom, Lantai 2</span>
-							<span class="bawah">Jakarta</span>
+							<span class="atas">Islamic Centre</span>
+							<span class="bawah">Bekasi</span>
 						</div>
 					</div>
-					<a class="location center-text" href="https://goo.gl/maps/unvtuFX4w4mXdGiJ8">
-						<span>Hotel Santika Premiere Hayam Wuruk<br>Jakarta</span>
+					<a class="location center-text" href="https://goo.gl/maps/H7bCbyNA9NU2">
+						<span>Islamic Centre<br>Bekasi</span>
 					</a>
 				</div>
 				<div class="image-cover"></div>
@@ -169,25 +169,25 @@
 
 				<br>
 				<div class="acara center-text">
-					<h3>Resepsi</h3>
+					<h3>Reception</h3>
 					<div class="acara-detail">
 						<div class="kiri">
 							<span class="atas">11.30 - 13.00</span>
 							<span class="bawah">WIB</span>
 						</div>
 						<div class="tengah">
-							<span class="top uppercase">Jan</span>
-							<span class="midle">04</span>
-							<span class="down">2022</span>
+							<span class="top uppercase">Feb</span>
+							<span class="midle">10</span>
+							<span class="down">2023</span>
 						</div>
 						<div class="kanan">
-							<span class="atas">Grand Ballroom, Lantai 2</span>
-							<span class="bawah">Jakarta</span>
+							<span class="atas">Islamic Centre</span>
+							<span class="bawah">Bekasi</span>
 						</div>
 					</div>
 
-					<a class="location center-text" href="https://goo.gl/maps/unvtuFX4w4mXdGiJ8">
-						<span>Hotel Santika Premiere Hayam Wuruk<br>Jakarta</span>
+					<a class="location center-text" href="https://goo.gl/maps/H7bCbyNA9NU2">
+						<span>Islamic Centre<br>Bekasi</span>
 					</a>
 				</div>
 				<!-- Display the countdown timer in an element -->
@@ -197,7 +197,7 @@
 				<div class="">
 					<script>
 						// Bulan - Tgl - Tahun
-						CountDownTimer('02/04/2022', 'countdate');
+						CountDownTimer('02/10/2023', 'countdate');
 
 						function CountDownTimer(dt, id) {
 							var end = new Date(dt);
@@ -241,9 +241,9 @@
 			<div class="acara center-text">
 			</div>
 			<div class="maps-full">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15867.441401242673!2d106.8173683!3d-6.1494501!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1b24f334f6f81cd7!2sHotel%20Santika%20Premiere%20Hayam%20Wuruk%20Jakarta!5e0!3m2!1sid!2sid!4v1614244123078!5m2!1sid!2sid" width="600" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.136263919878!2d106.9940266!3d-6.2457677!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc700df9e96c02065!2sIslamic%20Centre%20Bekasi!5e0!3m2!1sid!2sid!4v1643549316109!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			</div>
-			<a class="to-maps" href="https://goo.gl/maps/unvtuFX4w4mXdGiJ8">Navigasi Google Maps</a>
+			<a class="to-maps" href="https://goo.gl/maps/H7bCbyNA9NU2">Navigasi Google Maps</a>
 		</div>
 		<!-- End Maps -->
 
@@ -287,7 +287,7 @@
 			</div>
 			<!-- protokol kesehatan start  -->
 			<div class="heading-box count">
-				<h3 class="center-text">Protokol kesehatan</h3>
+				<h3 class="center-text">Health Protocol</h3>
 			</div>
 			<div class="content center-text">
 				Tanpa mengurangi rasa hormat, sesuai dengan peraturan pemerintah, para tamu undangan tetap wajib menjalankan protokol kesehatan sebagaimana mestinya.<br><br>
