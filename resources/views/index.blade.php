@@ -70,11 +70,11 @@
 		</div>
 		<div class="demo-nav" style="z-index:99 !important;">
 			<nav class="footer-5-icons">
-				<a href="#index"><i class="ico-home"></i><em>Home</em></a>
-				<a href="#mempelai"><i class="ico-mempelai"></i><em>Mempelai</em></a>
-				<a href="#maps"><i class="ico-location"></i><em>Maps</em></a>
-				<a href="#gallery"><i class="ico-gallery"></i><em>gallery</em></a>
-				<a href="#more"><i class="ico-more"></i><em>More</em></a>
+				<a href="#index"><i class="ico-home"></i>Home</a>
+				<a href="#mempelai"><i class="ico-mempelai"></i>Mempelai</a>
+				<a href="#maps"><i class="ico-location"></i>Maps</a>
+				<a href="#gallery"><i class="ico-gallery"></i>gallery</a>
+				<a href="#more"><i class="ico-more"></i>More</a>
 			</nav>
 		</div>
 		<!-- Start Index  -->
@@ -412,21 +412,21 @@
 		}
 
 		$("#remove_splash").on('click', function() {
-			$(".splash").attr('style', 'display:none;');
+			$(".splash").attr('style', 'display:none; ');
 			playAudio();
 		});
 
 		$(".copy-text").on('click', function() {
 			var copyText = $(this).val();
 			navigator.clipboard.writeText(copyText);
-			toastr.success('Berhasil Copy', 'Success Alert', {timeOut: 5000});
+			toastr.success('Copied!', 'Success Alert', {timeOut: 5000});
 		});
 
 		$('.modal').on('show.bs.modal', function (e) {
      		$('.modal .modal-dialog').attr('class', 'modal-dialog  animated zoomInDown');
 		})
-  		$('.close').on('hide.bs.modal', function (e) {
-   			$('.modal .modal-dialog').attr('class', 'modal-dialog  animated flipOutX animate__delay-10s');
+  		$('.modal').on('hide.bs.modal', function (e) {
+   			$('.modal .modal-dialog').attr('class', 'modal-dialog  animated flipOutX');
 		})
 	</script>
 </body>
