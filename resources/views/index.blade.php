@@ -138,7 +138,7 @@
 						<div class="bio">Putra Tunggal dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
 					</div>
 				</div>
-				<div class="acara center-text wow zoomInDown" data-wow-offset="350">
+				<div class="acara center-text wow zoomIn" data-wow-offset="230">
 					<h3><span class="cg" style="padding:2px">A</span><span class="cg" style="padding:2px">k</span><span class="cg" style="padding:2px">a</span><span class="cg" style="padding:2px">d</span></h3>
 					
 					<div class="acara-detail">
@@ -169,7 +169,7 @@
 				<!-- /* add to calendar end  */ -->
 
 				<br>
-				<div class="acara center-text">
+				<div class="acara center-text wow zoomInDown" data-wow-offset="170">
 					<h3><span class="cg">R</span><span class="cg">e</span><span class="cg">c</span><span class="cg">e</span><span class="cg">p</span><span class="cg">t</span><span class="cg">i</span><span class="cg">o</span><span class="cg" >n</span>
 					</h3>
 					<div class="acara-detail">
@@ -194,13 +194,13 @@
 				</div>
 				<!-- Display the countdown timer in an element -->
 				<div class="heading-box count">
-					<h3 class="center-text">
+					<h3 class="center-text wow zoomIn" data-wow-offset="250">
 						<span class="cg" >O</span><span class="cg" >u</span><span class="cg" >r</span>
 						<span class="cg" >H</span><span class="cg" >a</span><span class="cg" >p</span><span class="cg">p</span><span class="cg">y</span><br>
 						<span class="cg">M</span><span class="cg">o</span><span class="cg">m</span><span class="cg">e</span><span class="cg">n</span><span class="cg">t</span>
 					</h3>
 				</div>
-				<div class="">
+				<div class="center-text wow zoomIn" data-wow-offset="150">
 					<script>
 						// Bulan - Tgl - Tahun
 						CountDownTimer('02/12/2023', 'countdate');
@@ -256,27 +256,27 @@
 		<!-- Start Gallery  -->
 		<div id="gallery" class="page-content-scroll">
 			<!-- virtual wedding start  -->
-			<div class="heading-box">
+			<div class="heading-box wow slideInLeft" data-wow-offset="350">
 				<h3 class="center-text">
 					<span class="cg">P</span><span class="cg">r</span><span class="cg">e</span><span class="cg">w</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
 					<span class="cg">C</span><span class="cg">l</span><span class="cg">i</span><span class="cg">p</span>
 				</h3>
 				<!-- <span class="center-text">Live Streaming</span> -->
 			</div>
-			<div class="video">
+			<div class="video wow slideInLeft" data-wow-offset="250">
 				<amp-youtube data-videoid="N2bLL6tdpIM" layout="responsive" width="560" height="315">
 					<amp-img src="{{ asset('template/assets/img/videoc4ca.png?1') }}" width="700" height="421" placeholder layout="fill" />
 				</amp-youtube>
 			</div>
 			<br><br><br><br>
 			<!-- virtual wedding end  -->
-			<div class="heading-box">
+			<div class="heading-box wow slideInRight" data-wow-offset="150">
 				<h3 class="center-text">
 					<span class="cg">W</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
 					<span class="cg">G</span><span class="cg">a</span><span class="cg">l</span><span class="cg">l</span><span class="cg">e</span><span class="cg">r</span><span class="cg">y</span>
 				</h3>
 			</div>
-			<div class="">
+			<div class="wow slideInRight" data-wow-offset="50">
 				<amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
 				<div class="gallery gallery-square full-bottom">
 					<iframe src="{{url('gallery')}}" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">
@@ -298,13 +298,13 @@
 				</amp-img>
 			</div>
 			<!-- protokol kesehatan start  -->
-			<div class="heading-box count">
+			<div class="heading-box wow swing" data-wow-offset="250">
 				<h3 class="center-text">
 					<span class="cg">H</span><span class="cg">e</span><span class="cg">a</span><span class="cg">l</span><span class="cg">t</span><span class="cg">h</span>
 					<span class="cg">P</span><span class="cg">r</span><span class="cg">o</span><span class="cg">t</span><span class="cg">o</span><span class="cg">c</span><span class="cg">o</span><span class="cg">l</span>
 				</h3>
 			</div>
-			<div class="content center-text">
+			<div class="content center-text wow swing" data-wow-offset="150">
 				Tanpa mengurangi rasa hormat, sesuai dengan peraturan pemerintah, para tamu undangan tetap wajib menjalankan protokol kesehatan sebagaimana mestinya.<br><br>
 				Pastikan kondisi badan dalam keadaan sehat saat menghadiri undangan. <br>
 				Terimakasih atas kerjasama Bapak/Ibu/Saudara/i.
@@ -312,7 +312,7 @@
 			</div>
 			<!-- protokol kesehatan end  -->
 			<!-- wedding gift -->
-			<div class="heading-box count">
+			<div class="heading-box wow bounceIn" data-wow-offset="250">
 				<h3 class="center-text">
 					<span class="cg">W</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
 					<span class="cg">G</span><span class="cg">i</span><span class="cg">f</span><span class="cg">t</span>
@@ -364,7 +364,7 @@
 			</div>
 			<!-- wedding gift end -->
 		</div>
-		<div class="heading-box">
+		<div class="heading-box wow bounceIn" data-wow-offset="150">
 			<h3 class="center-text">
 				<span class="cg">W</span><span class="cg">i</span><span class="cg">s</span><span class="cg">h</span><span class="cg">e</span><span class="cg">s</span>
 			</h3>
