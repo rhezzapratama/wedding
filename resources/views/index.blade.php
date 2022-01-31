@@ -318,7 +318,7 @@
 					<span class="cg">G</span><span class="cg">i</span><span class="cg">f</span><span class="cg">t</span>
 				</h3>
 			</div>
-			<div class="lihat-btn center-text" data-toggle="modal" data-target="#modalContoh" data-backdrop="static" data-keyboard="false">
+			<div class="lihat-btn center-text wow pulse" data-wow-offset="250" data-wow-iteration="50" data-toggle="modal" data-target="#modalContoh" data-backdrop="static" data-keyboard="false">
 				<p><i class="fa fa-gift"></i> Send Gift</p>
 			</div>
 			<div class="modal fade" id="modalContoh" tabindex="-1" role="dialog" aria-hidden="true">
