@@ -7,10 +7,12 @@
 <style type="text/css">
 body {
     background: transparent;
+    font-family: 'Product Sans' !important;
 }
 .user_name{
     font-size:14px;
     font-weight: bold;
+    font-
 }
 .comments-list .media{
     border-bottom: 1px dotted #ccc;
@@ -24,7 +26,7 @@ body {
         <div class="col-md-12">
             <form data-toggle="validator" action="{{ route('item-ajax.store') }}" method="POST">
                 <div class="form-group">
-                    <textarea type="text" name="ucapan" id="ucapan" class="form-control" rows="4" placeholder="Tulisan ucapan kalian disini ..." maxlength="100" data-error="Please enter title." required></textarea>
+                    <textarea type="text" name="ucapan" id="ucapan" class="form-control" rows="4" placeholder="Tuliskan ucapan & doa" maxlength="100" data-error="Please enter title." required></textarea>
                     <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
