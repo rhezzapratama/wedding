@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\listTamu;
 
 class BerandaController extends Controller
 {
     //
     public function index(Request $request)
     {
-        $tamu = $request->tamu??'Tamu Undangan';
+        $obj = listTamu::whereId($request->tamu)->first();
+        $tamu = $obj->nama??'Tamu Undangan';
         return view('index',compact('tamu'));
     }
 }
