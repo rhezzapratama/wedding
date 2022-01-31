@@ -39,9 +39,9 @@
 		text-decoration: none !important;
 		color:inherit !important;
 	}
-	.lihat-btn a:hover{
+	/* .lihat-btn a:hover{
 		color: white !important;
-	}
+	} */
 	</style>
 </head>
 
@@ -63,8 +63,8 @@
 				<span class="maaf">
 					Mohon maaf apabila ada kesalahan dalam penulisan nama atau gelar
 				</span>
-				<div class="lihat-btn">
-					<a href="#" id="remove_splash"><i class="fa fa-gift"></i> Liat Detail Undangan</a>
+				<div class="lihat-btn" style="margin-top: 10px;">
+					<a href="#" id="remove_splash"><i class="fa fa-gift"></i> Lihat Detail Undangan</a>
 				</div>
 			</div>
 		</div>
@@ -324,8 +324,8 @@
 			<div class="modal fade" id="modalContoh" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog" style="overflow-y: initial !important" role="document">
 					<div class="modal-content">
-						<div class="modal-header text-light" style="background-color:#9a8569;">
-							<h5 class="modal-title">Send Gift</h5>
+						<div class="modal-header text-light" style="background-color:#ffffff;">
+							<h5 class="modal-title" style="color: #4c4c4d !important">Send Gift</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           						<span aria-hidden="true">&times;</span>
         					</button>

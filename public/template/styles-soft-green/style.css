@@ -449,7 +449,7 @@ nav a em{
 	opacity:0.8;
 	/* text-transform:uppercase; */
 	font-style:normal;
-	font-family: "Roboto";
+	font-family: "Product Sans";
 	color: #4c4c4d;
 }
 
@@ -1264,7 +1264,7 @@ ol, ul{line-height:24px; margin-left:20px;}
 /*Contact Page*/
 
 .contactField{
-	font-family:'Roboto', sans-serif;
+	font-family:'Product Sans', sans-serif;
 	height:40px;
 	line-height:40px;
 	line-height:100%;
@@ -1283,7 +1283,7 @@ ol, ul{line-height:24px; margin-left:20px;}
 }
 
 .contactTextarea{
-	font-family:'Roboto', sans-serif;
+	font-family:'Product Sans', sans-serif;
 	padding-top:10px;
 	min-height:80px;
 	line-height:40px;
@@ -1784,19 +1784,19 @@ h4{
 }
 
 .to-maps {
-    min-width: 100px;
+	min-width: 102px;
     display: inline-block;
     text-align: center;
-    background: #FFF;
-    font-weight: 500;
-    padding: 10px 15px;
+    background: #ffffff;
+    font-size: 12px;
+    padding: 10px 20px;
     border-radius: 4px;
-    border: 1px solid #4c9e87;
-    -webkit-box-shadow: 6px 2px 52px -5px rgba(76, 158, 135, 0.25);
-    -moz-box-shadow: 6px 2px 52px -5px rgba(76, 76, 76, 0.5);
-    box-shadow: 6px 2px 52px -5px rgba(76, 158, 135, 0.25);
-    font-family: "Roboto";
-    color: #4c9e87;
+    border: 1px solid;
+    -webkit-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);
+    -moz-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);
+    box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);
+    font-family: "Product Sans";
+    color: #4c4c4d;
     margin-top: 20px;
 }
 /* add to calendar start  */
@@ -1814,7 +1814,7 @@ h4{
 	padding: 10px 20px;
 	border-radius: 4px;
 	font-size: 12px;
-	font-family: "roboto";
+	font-family: "Product Sans";
 	-webkit-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);
 	-moz-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);
 	box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);
@@ -1828,12 +1828,12 @@ h4{
     width: 100%;
 }
 
-.live-btn a {/* border: 1px solid; */background-color: #ffffff;color: #c03a2b;display: inline;padding: 10px 20px;border-radius: 4px;font-size: 12px;font-family: "roboto";-webkit-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);-moz-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);}
+.live-btn a {/* border: 1px solid; */background-color: #ffffff;color: #c03a2b;display: inline;padding: 10px 20px;border-radius: 4px;font-size: 12px;font-family: "Product Sans";-webkit-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);-moz-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);}
 
 .footer-akad{
 	padding-bottom: 80px;
 	font-size: 10px;
-	font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: Product Sans, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .footer-akad a{
 	color: inherit;
@@ -1942,11 +1942,18 @@ font-size: 20px;
     padding: 50px 0;
 }
 .lihat-btn a, .lihat-btn p {
-    background: #9a8569;
-    padding: 10px;
+    background: #ffffff;
+    padding: 10px 20px;
     margin: 10px 20px;
-    border-radius: 6px;
-    color: #fff;
+    border-radius: 4px;
+    color: #4c4c4d;
+    font-size: 12px;
+    display: inline;
+    border: 1px solid;
+    font-family: 'Product Sans';
+    -webkit-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);
+    -moz-box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);
+    box-shadow: 6px 2px 52px -5px rgb(91 79 65 / 16%);
 }
 /* end  nama tamu undangan  */
 
