@@ -399,6 +399,45 @@
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 	<script type="text/javascript" src="{{asset('template/animation/js/wow.js')}}"></script>
 	<script type="text/javascript">
+		var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+		function preventDefault(e){
+			e.preventDefault();
+		}
+
+		function preventDefaultForScrollKeys(e) {
+			if (keys[e.keyCode]) {
+				preventDefault(e);
+				return false;
+			}
+		}
+
+		function scrollenabled(){
+			window.removeEventListener('DOMMouseScroll', preventDefault, false);
+			window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+			window.removeEventListener('touchmove', preventDefault, wheelOpt);
+			window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+		}
+
+		function scrolldisabled(){
+			window.addEventListener('DOMMouseScroll', preventDefault, false); 
+			window.addEventListener(wheelEvent, preventDefault, wheelOpt);
+			window.addEventListener('touchmove', preventDefault, wheelOpt);
+			window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+		}
+
+		var supportsPassive = false;
+		try {
+		window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+			get: function () { supportsPassive = true; } 
+		}));
+		} catch(e) {}
+		var wheelOpt = supportsPassive ? { passive: false } : false;
+		var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+		$(document).ready(function() {
+			scrolldisabled();
+		});
+
 		var x = document.getElementById("myAudio");
 		var c = document.getElementById("play-btn");
 
@@ -414,6 +453,7 @@
 
 		$("#remove_splash").on('click', function() {
 			$(".splash").attr('style', 'display:none; ');
+			scrollenabled();
 			playAudio();
 		});
 
