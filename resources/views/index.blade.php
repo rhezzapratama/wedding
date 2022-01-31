@@ -117,7 +117,7 @@
 				<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/bg-rose.png') }}" width="195" height="256" layout="responsive"></amp-img>
 			</div>
 			<div class="mempelai-text">
-				<div class="mempelai cwe">
+				<div class="mempelai cwe wow fadeInRight" data-wow-duration="2s" data-wow-offset="400">
 					<div class="img">
 						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwe.png') }}" width="250" height="250" layout="responsive"></amp-img>
 					</div>
@@ -128,7 +128,7 @@
 							Putri Kedua dari <br>Bapak Uci Sanusi & <br>Ibu Eti Roswiati</div>
 					</div>
 				</div>
-				<div class="mempelai cwo">
+				<div class="mempelai cwo wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="250">
 					<div class="img">
 						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwo.png') }}" width="250" height="250" layout="responsive"></amp-img>
 					</div>
@@ -138,7 +138,7 @@
 						<div class="bio">Putra Tunggal dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
 					</div>
 				</div>
-				<div class="acara center-text">
+				<div class="acara center-text wow zoomInDown" data-wow-offset="350">
 					<h3><span class="cg" style="padding:2px">A</span><span class="cg" style="padding:2px">k</span><span class="cg" style="padding:2px">a</span><span class="cg" style="padding:2px">d</span></h3>
 					
 					<div class="acara-detail">
@@ -397,6 +397,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script type="text/javascript" src="{{asset('template/animation/js/wow.js')}}"></script>
 	<script type="text/javascript">
 		var x = document.getElementById("myAudio");
 		var c = document.getElementById("play-btn");
@@ -428,6 +429,17 @@
   		$('.modal').on('hide.bs.modal', function (e) {
    			$('.modal .modal-dialog').attr('class', 'modal-dialog  animated flipOutX');
 		})
+
+		wow = new WOW(
+			{
+			boxClass:     'wow',      // default
+			animateClass: 'animated', // default
+			offset:       0,          // default
+			mobile:       true,       // default
+			live:         true        // default
+		}
+		)
+		wow.init();
 	</script>
 </body>
 
