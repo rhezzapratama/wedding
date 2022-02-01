@@ -35,13 +35,61 @@
 	html {
 		scroll-behavior: smooth;
   	}
+	.input-border {
+		display: -ms-flexbox; /* IE10 */
+		display: flex;
+		width: 100%;
+		color: #4c4c4d;
+		padding: 0px 20px;
+	}
+
+	.icon {
+		padding: 12px;
+		background: #4285F4;
+		color: white;
+		min-width: 40px;
+		text-align: center;
+		border-radius: 0px 4px 4px 0px;
+		border: 1px solid #4285F4;
+	}
+	.input-field {
+		background: white;
+		font-size: 16px;
+		width: 100%;
+		padding: 10px 20px;
+		border: 1px solid #4285F4;
+		font-family: 'Product Sans';
+		border-radius: 4px 0px 0px 0px;
+	}
+	.input-field1 {
+		background: white;
+		font-size: 16px;
+		padding: 10px 20px;
+		border: 1px solid #4285F4;
+		font-family: 'Product Sans';
+		width: 100%;
+		text-align: left;
+		border-radius: 0px 0px 4px 4px;
+		border-top: none;
+		box-shadow: 5px 5px 0px rgba(0,0,0,0.15);
+	}
+	}
 	a:hover{
 		text-decoration: none !important;
 		color:inherit !important;
 	}
-	/* .lihat-btn a:hover{
+	.lihat-btn a:hover{
 		color: white !important;
-	} */
+		text-decoration: none;
+	}
+	.addto-calendar a:hover{
+		color: white !important;
+		text-decoration: none;
+	}
+	a.to-maps:hover{
+		color: white !important;
+		text-decoration: none;
+	}
 	</style>
 </head>
 
@@ -50,9 +98,28 @@
 		<div class="splash">
 			<div class="content center-text">
 				<div class="heading-box">
-					<span>The Wedding of </span>
-					<h3>Ayu & Reza</h3>
-					<span>12 February 2023<br>08.00</span>
+					<h5>
+						<b>
+						<span class="cg">T</span><span class="cg">h</span><span class="cg">e</span>
+						<span class="cg">W</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
+						<span class="cg">o</span><span class="cg">f</span>
+						</b>
+					</h5>
+					<div class="container">
+						<div class="row">
+							<div class="input-border">
+    							<input class="input-field" type="text" value="Ayu & Reza" disabled>
+   					 			<i class="fa fa-search icon"></i>
+ 							</div>
+							<div class="input-border">
+								<div class="input-field1">
+									<p style="color:black">wedding dates on Feb 12, 2023</p>
+									<p style="color:black">wedding time at 08.00 - 14.00</p>
+								</div>
+								<i class="fa fa-search icon" style="background-color: Transparent; border:none;"></i>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="nama-box center-text">
@@ -70,11 +137,11 @@
 		</div>
 		<div class="demo-nav" style="z-index:99 !important;">
 			<nav class="footer-5-icons">
-				<a href="#index"><i class="ico-home"></i>Home</a>
-				<a href="#mempelai"><i class="ico-mempelai"></i>Mempelai</a>
-				<a href="#maps"><i class="ico-location"></i>Maps</a>
-				<a href="#gallery"><i class="ico-gallery"></i>gallery</a>
-				<a href="#more"><i class="ico-more"></i>More</a>
+				<a href="#index" style="text-decoration:none;"><i class="ico-home"></i>Home</a>
+				<a href="#mempelai" style="text-decoration:none;"><i class="ico-mempelai"></i>Mempelai</a>
+				<a href="#maps" style="text-decoration:none;"><i class="ico-location"></i>Maps</a>
+				<a href="#gallery" style="text-decoration:none;"><i class="ico-gallery"></i>gallery</a>
+				<a href="#more" style="text-decoration:none;"><i class="ico-more"></i>More</a>
 			</nav>
 		</div>
 		<!-- Start Index  -->
@@ -98,9 +165,11 @@
 				</div>
 				<div class="greeting center-text uppercase">The wedding of</div>
 				<div class="home-name center-text uppercase">
-					</span> Ayu & Reza <span>
+					<span>Sri Rahayu Gantini, S.T</span> <br>
+					<span>&</span><br>
+					<span>Reza Pratama, S.Kom</span>
 				</div>
-				<a class="location center-text" href="https://goo.gl/maps/H7bCbyNA9NU2">
+				<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/H7bCbyNA9NU2">
 					<i class="ico-location"></i>
 					<span>Islamic Centre<br>Bekasi</span>
 				</a>
@@ -122,7 +191,7 @@
 						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwe.png') }}" width="250" height="250" layout="responsive"></amp-img>
 					</div>
 					<div class="detail">
-						<h3>Ayu</h3>
+						<h3 style="color:#FBBC05">Ayu</h3>
 						<div class="fullname"><br>Sri Rahayu Gantini, S.T</div>
 						<div class="bio">
 							Putri Kedua dari <br>Bapak Uci Sanusi & <br>Ibu Eti Roswiati</div>
@@ -133,7 +202,7 @@
 						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwo.png') }}" width="250" height="250" layout="responsive"></amp-img>
 					</div>
 					<div class="detail">
-						<h3>Reza</h3>
+						<h3 style="color:#34A853">Reza</h3>
 						<div class="fullname"><br>Reza Pratama, S.Kom</div>
 						<div class="bio">Putra Tunggal dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
 					</div>
@@ -156,7 +225,7 @@
 							<span class="bawah">Bekasi</span>
 						</div>
 					</div>
-					<a class="location center-text" href="https://goo.gl/maps/H7bCbyNA9NU2">
+					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/H7bCbyNA9NU2">
 						<span>Islamic Centre<br>Bekasi</span>
 					</a>
 				</div>
@@ -188,7 +257,7 @@
 						</div>
 					</div>
 
-					<a class="location center-text" href="https://goo.gl/maps/H7bCbyNA9NU2">
+					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/H7bCbyNA9NU2">
 						<span>Islamic Centre<br>Bekasi</span>
 					</a>
 				</div>
@@ -318,14 +387,19 @@
 					<span class="cg">G</span><span class="cg">i</span><span class="cg">f</span><span class="cg">t</span>
 				</h3>
 			</div>
-			<div class="lihat-btn center-text wow pulse" data-wow-offset="250" data-wow-iteration="50" data-toggle="modal" data-target="#modalContoh" data-backdrop="static" data-keyboard="false">
+			<div class="lihat-btn center-text wow pulse" data-wow-offset="250" data-wow-iteration="infinite" data-toggle="modal" data-target="#modalContoh" data-backdrop="static" data-keyboard="false">
 				<p><i class="fa fa-gift"></i> Send Gift</p>
 			</div>
 			<div class="modal fade" id="modalContoh" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog" style="overflow-y: initial !important" role="document">
 					<div class="modal-content">
 						<div class="modal-header text-light" style="background-color:#ffffff;">
-							<h5 class="modal-title" style="color: #4c4c4d !important">Send Gift</h5>
+							<h5 class="modal-title" style="color: #4c4c4d !important;">
+								<b>
+									<span class="cg">S</span><span class="cg">e</span><span class="cg">n</span class="cg"><span class="cg">d</span>
+									<span class="cg">G</span><span class="cg">i</span><span class="cg">f</span><span class="cg">t</span>
+								</b>
+							</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           						<span aria-hidden="true">&times;</span>
         					</button>
@@ -334,11 +408,11 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="img center-text">
-										<h5>BCA</h5>
+										<h5 style="color: ">BCA</h5>
 										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
 										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-bca.jpeg') }}" alt="" style="width:100%">
 										<div style="margin-top:6px;">
-											<button class="btn btn-sm btn-outline-dark copy-text" value="2100130826">2100130826</button>
+											<button class="btn btn-sm copy-text" style="background:#34A853 !important; color:white!important;" value="2100130826">2100130826</button>
 										</div>
 									</div>
 								</div>
@@ -348,7 +422,7 @@
 										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
 										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-ovo.jpeg') }}" alt="" style="width:100%">
 										<div style="margin-top:6px;">
-											<button class="btn btn-sm btn-outline-dark copy-text" value="081293129163">081293129163</button>
+											<button class="btn btn-sm copy-text" style="background:#EA4335!important; color:white!important;" value="081293129163">081293129163</button>
 										</div>
 									</div>
 								</div>
