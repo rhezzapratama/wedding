@@ -18,8 +18,8 @@ body {
 .user_name{
     font-size:14px;
     font-weight: bold;
-    font-
 }
+
 .comments-list .media{
     border-bottom: 1px dotted #ccc;
 }
@@ -49,7 +49,7 @@ body {
                     <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn crud-submit btn-default btn-sm pull-right btn-block">K I R I M</button>
+                    <button type="submit" class="btn crud-submit btn-default btn-sm pull-right btn-block" style="background: #FBBC05; color: white;">K I R I M</button>
                 </div>
             </form>
         </div>

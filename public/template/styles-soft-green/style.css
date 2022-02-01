@@ -257,18 +257,6 @@ span.cg{
 .cg:nth-child(7n+5) { color: #34A853; }
 .cg:nth-child(7n+6) { color: #EA4335; }
 .cg:nth-child(7n+7) { color: #FBBC05; }
-/* span {
-	display: inline-block;
-	text-align: center;
-	
-	&:nth-child(7n+1) { color: #4285F4; }
-	&:nth-child(7n+2) { color: #EA4335; }
-	&:nth-child(7n+3) { color: #FBBC05; }
-	&:nth-child(7n+4) { color: #4285F4; }
-	&:nth-child(7n+5) { color: #34A853; }
-	&:nth-child(7n+6) { color: #EA4335; }
-	&:nth-child(7n+7) { color: #FBBC05; }
-} */
 
 div, a, p, img, blockquote, form, fieldset, textarea, input, label, iframe, code, pre {
 	display: block;
@@ -1788,7 +1776,7 @@ h4{
 	min-width: 102px;
     display: inline-block;
     text-align: center;
-    background: #FBBC05;
+    background: #EA4335;
     font-size: 12px;
     padding: 10px 20px;
     border-radius: 4px;
@@ -1945,7 +1933,7 @@ font-size: 20px;
 .lihat-btn a, .lihat-btn p {
     background: #4285F4;
     padding: 10px 20px;
-    margin: 10px 20px;
+    margin: 10px 31px;
     border-radius: 4px;
     color: white;
     font-size: 12px;

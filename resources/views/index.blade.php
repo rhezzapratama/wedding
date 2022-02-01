@@ -99,9 +99,11 @@
 			<div class="content center-text">
 				<div class="heading-box">
 					<h5>
+						<b>
 						<span class="cg">T</span><span class="cg">h</span><span class="cg">e</span>
 						<span class="cg">W</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
 						<span class="cg">o</span><span class="cg">f</span>
+						</b>
 					</h5>
 					<div class="container">
 						<div class="row">
@@ -163,9 +165,11 @@
 				</div>
 				<div class="greeting center-text uppercase">The wedding of</div>
 				<div class="home-name center-text uppercase">
-					</span> Ayu & Reza <span>
+					<span>Sri Rahayu Gantini, S.T</span> <br>
+					<span>&</span><br>
+					<span>Reza Pratama, S.Kom</span>
 				</div>
-				<a class="location center-text" href="https://goo.gl/maps/H7bCbyNA9NU2">
+				<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/H7bCbyNA9NU2">
 					<i class="ico-location"></i>
 					<span>Islamic Centre<br>Bekasi</span>
 				</a>
@@ -187,7 +191,7 @@
 						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwe.png') }}" width="250" height="250" layout="responsive"></amp-img>
 					</div>
 					<div class="detail">
-						<h3 style="color:#34A853">Ayu</h3>
+						<h3 style="color:#FBBC05">Ayu</h3>
 						<div class="fullname"><br>Sri Rahayu Gantini, S.T</div>
 						<div class="bio">
 							Putri Kedua dari <br>Bapak Uci Sanusi & <br>Ibu Eti Roswiati</div>
@@ -198,7 +202,7 @@
 						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwo.png') }}" width="250" height="250" layout="responsive"></amp-img>
 					</div>
 					<div class="detail">
-						<h3 style="color:#FBBC05">Reza</h3>
+						<h3 style="color:#34A853">Reza</h3>
 						<div class="fullname"><br>Reza Pratama, S.Kom</div>
 						<div class="bio">Putra Tunggal dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
 					</div>
@@ -221,7 +225,7 @@
 							<span class="bawah">Bekasi</span>
 						</div>
 					</div>
-					<a class="location center-text" href="https://goo.gl/maps/H7bCbyNA9NU2">
+					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/H7bCbyNA9NU2">
 						<span>Islamic Centre<br>Bekasi</span>
 					</a>
 				</div>
@@ -253,7 +257,7 @@
 						</div>
 					</div>
 
-					<a class="location center-text" href="https://goo.gl/maps/H7bCbyNA9NU2">
+					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/H7bCbyNA9NU2">
 						<span>Islamic Centre<br>Bekasi</span>
 					</a>
 				</div>
@@ -390,7 +394,12 @@
 				<div class="modal-dialog" style="overflow-y: initial !important" role="document">
 					<div class="modal-content">
 						<div class="modal-header text-light" style="background-color:#ffffff;">
-							<h5 class="modal-title" style="color: #4c4c4d !important">Send Gift</h5>
+							<h5 class="modal-title" style="color: #4c4c4d !important;">
+								<b>
+									<span class="cg">S</span><span class="cg">e</span><span class="cg">n</span class="cg"><span class="cg">d</span>
+									<span class="cg">G</span><span class="cg">i</span><span class="cg">f</span><span class="cg">t</span>
+								</b>
+							</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           						<span aria-hidden="true">&times;</span>
         					</button>
@@ -399,11 +408,11 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="img center-text">
-										<h5>BCA</h5>
+										<h5 style="color: ">BCA</h5>
 										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
 										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-bca.jpeg') }}" alt="" style="width:100%">
 										<div style="margin-top:6px;">
-											<button class="btn btn-sm btn-outline-dark copy-text" value="2100130826">2100130826</button>
+											<button class="btn btn-sm copy-text" style="background:#34A853 !important; color:white!important;" value="2100130826">2100130826</button>
 										</div>
 									</div>
 								</div>
@@ -413,7 +422,7 @@
 										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
 										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-ovo.jpeg') }}" alt="" style="width:100%">
 										<div style="margin-top:6px;">
-											<button class="btn btn-sm btn-outline-dark copy-text" value="081293129163">081293129163</button>
+											<button class="btn btn-sm copy-text" style="background:#EA4335!important; color:white!important;" value="081293129163">081293129163</button>
 										</div>
 									</div>
 								</div>
