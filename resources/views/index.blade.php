@@ -181,7 +181,7 @@
 						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwe.png') }}" width="250" height="250" layout="responsive"></amp-img>
 					</div>
 					<div class="detail">
-						<h3 style="color:#4285F4">Ayu</h3>
+						<h3 style="color:#34A853">Ayu</h3>
 						<div class="fullname"><br>Sri Rahayu Gantini, S.T</div>
 						<div class="bio">
 							Putri Kedua dari <br>Bapak Uci Sanusi & <br>Ibu Eti Roswiati</div>
