@@ -134,11 +134,11 @@
 		</div>
 		<div class="demo-nav" style="z-index:99 !important;">
 			<nav class="footer-5-icons">
-				<a href="#index"><i class="ico-home"></i>Home</a>
-				<a href="#mempelai"><i class="ico-mempelai"></i>Mempelai</a>
-				<a href="#maps"><i class="ico-location"></i>Maps</a>
-				<a href="#gallery"><i class="ico-gallery"></i>gallery</a>
-				<a href="#more"><i class="ico-more"></i>More</a>
+				<a href="#index" style="text-decoration:none;"><i class="ico-home"></i>Home</a>
+				<a href="#mempelai" style="text-decoration:none;"><i class="ico-mempelai"></i>Mempelai</a>
+				<a href="#maps" style="text-decoration:none;"><i class="ico-location"></i>Maps</a>
+				<a href="#gallery" style="text-decoration:none;"><i class="ico-gallery"></i>gallery</a>
+				<a href="#more" style="text-decoration:none;"><i class="ico-more"></i>More</a>
 			</nav>
 		</div>
 		<!-- Start Index  -->
