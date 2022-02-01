@@ -109,11 +109,12 @@
     							<input class="input-field" type="text" value="Ayu & Reza" disabled>
    					 			<i class="fa fa-search icon"></i>
  							</div>
-							<div class="input-border" style="width:88.5%">
+							<div class="input-border">
 								<div class="input-field1">
 									<p style="color:black">wedding dates on Feb 12, 2023</p>
 									<p style="color:black">wedding time at 08.00 - 14.00</p>
 								</div>
+								<i class="fa fa-search icon" style="background-color: Transparent; border:none;"></i>
 							</div>
 						</div>
 					</div>
