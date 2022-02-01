@@ -71,19 +71,24 @@
 		text-align: left;
 		border-radius: 0px 0px 4px 4px;
 		border-top: none;
+		box-shadow: 5px 5px 0px rgba(0,0,0,0.15);
+	}
 	}
 	a:hover{
 		text-decoration: none !important;
-		/* color:inherit !important; */
+		color:inherit !important;
 	}
 	.lihat-btn a:hover{
 		color: white !important;
+		text-decoration: none;
 	}
 	.addto-calendar a:hover{
 		color: white !important;
+		text-decoration: none;
 	}
 	a.to-maps:hover{
 		color: white !important;
+		text-decoration: none;
 	}
 	</style>
 </head>
@@ -101,7 +106,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="input-border">
-    							<input class="input-field" type="text" placeholder="Ayu & Reza" disabled>
+    							<input class="input-field" type="text" value="Ayu & Reza" disabled>
    					 			<i class="fa fa-search icon"></i>
  							</div>
 							<div class="input-border" style="width:88.5%">
