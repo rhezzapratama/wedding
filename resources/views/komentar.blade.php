@@ -5,6 +5,12 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
 <style type="text/css">
+@font-face {
+font-family: 'Product Sans';
+font-style: normal;
+font-weight: 400;
+src: url({{asset('template/assets/fonts/product-google.woff2')}}) format('woff2');
+}
 body {
     background: transparent;
     font-family: 'Product Sans' !important;

@@ -35,13 +35,56 @@
 	html {
 		scroll-behavior: smooth;
   	}
+	.input-border {
+		display: -ms-flexbox; /* IE10 */
+		display: flex;
+		width: 100%;
+		color: #4c4c4d;
+		padding: 0px 20px;
+	}
+
+	.icon {
+		padding: 12px;
+		background: #4285F4;
+		color: white;
+		min-width: 40px;
+		text-align: center;
+		border-radius: 0px 4px 4px 0px;
+		border: 1px solid #4285F4;
+	}
+	.input-field {
+		background: white;
+		font-size: 16px;
+		width: 100%;
+		padding: 10px 20px;
+		border: 1px solid #4285F4;
+		font-family: 'Product Sans';
+		border-radius: 4px 0px 0px 0px;
+	}
+	.input-field1 {
+		background: white;
+		font-size: 16px;
+		padding: 10px 20px;
+		border: 1px solid #4285F4;
+		font-family: 'Product Sans';
+		width: 100%;
+		text-align: left;
+		border-radius: 0px 0px 4px 4px;
+		border-top: none;
+	}
 	a:hover{
 		text-decoration: none !important;
-		color:inherit !important;
+		/* color:inherit !important; */
 	}
-	/* .lihat-btn a:hover{
+	.lihat-btn a:hover{
 		color: white !important;
-	} */
+	}
+	.addto-calendar a:hover{
+		color: white !important;
+	}
+	a.to-maps:hover{
+		color: white !important;
+	}
 	</style>
 </head>
 
@@ -50,9 +93,25 @@
 		<div class="splash">
 			<div class="content center-text">
 				<div class="heading-box">
-					<span>The Wedding of </span>
-					<h3>Ayu & Reza</h3>
-					<span>12 February 2023<br>08.00</span>
+					<h5>
+						<span class="cg">T</span><span class="cg">h</span><span class="cg">e</span>
+						<span class="cg">W</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
+						<span class="cg">o</span><span class="cg">f</span>
+					</h5>
+					<div class="container">
+						<div class="row">
+							<div class="input-border">
+    							<input class="input-field" type="text" placeholder="Ayu & Reza" disabled>
+   					 			<i class="fa fa-search icon"></i>
+ 							</div>
+							<div class="input-border" style="width:88.5%">
+								<div class="input-field1">
+									<p style="color:black">wedding dates on Feb 12, 2023</p>
+									<p style="color:black">wedding time at 08.00 - 14.00</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="nama-box center-text">
@@ -122,7 +181,7 @@
 						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwe.png') }}" width="250" height="250" layout="responsive"></amp-img>
 					</div>
 					<div class="detail">
-						<h3>Ayu</h3>
+						<h3 style="color:#4285F4">Ayu</h3>
 						<div class="fullname"><br>Sri Rahayu Gantini, S.T</div>
 						<div class="bio">
 							Putri Kedua dari <br>Bapak Uci Sanusi & <br>Ibu Eti Roswiati</div>
@@ -133,7 +192,7 @@
 						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwo.png') }}" width="250" height="250" layout="responsive"></amp-img>
 					</div>
 					<div class="detail">
-						<h3>Reza</h3>
+						<h3 style="color:#FBBC05">Reza</h3>
 						<div class="fullname"><br>Reza Pratama, S.Kom</div>
 						<div class="bio">Putra Tunggal dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
 					</div>
@@ -318,7 +377,7 @@
 					<span class="cg">G</span><span class="cg">i</span><span class="cg">f</span><span class="cg">t</span>
 				</h3>
 			</div>
-			<div class="lihat-btn center-text wow pulse" data-wow-offset="250" data-wow-iteration="50" data-toggle="modal" data-target="#modalContoh" data-backdrop="static" data-keyboard="false">
+			<div class="lihat-btn center-text wow pulse" data-wow-offset="250" data-wow-iteration="infinite" data-toggle="modal" data-target="#modalContoh" data-backdrop="static" data-keyboard="false">
 				<p><i class="fa fa-gift"></i> Send Gift</p>
 			</div>
 			<div class="modal fade" id="modalContoh" tabindex="-1" role="dialog" aria-hidden="true">
