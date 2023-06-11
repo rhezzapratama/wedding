@@ -10,8 +10,10 @@ class BerandaController extends Controller
     //
     public function index(Request $request)
     {
-        $obj = listTamu::whereId($request->tamu)->first();
+        $obj = listTamu::where('alias', '=', $request->tamu)->first();
         $tamu = $obj->nama??'Tamu Undangan';
-        return view('index',compact('tamu'));
+        $code_tamu = $obj->id??'';
+        $alias = $obj->alias??'';
+        return view('index', ['tamu' => $tamu, 'code_tamu' => $code_tamu, 'alias' => $alias]);
     }
 }

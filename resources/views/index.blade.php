@@ -35,6 +35,9 @@
 	html {
 		scroll-behavior: smooth;
   	}
+	*:focus {
+		outline: 0 !important;
+	}
 	.input-border {
 		display: -ms-flexbox; /* IE10 */
 		display: flex;
@@ -73,6 +76,9 @@
 		border-top: none;
 		box-shadow: 5px 5px 0px rgba(0,0,0,0.15);
 	}
+	
+	.input-field1 p {
+		font-size: 13px;
 	}
 	a:hover{
 		text-decoration: none !important;
@@ -89,6 +95,10 @@
 	a.to-maps:hover{
 		color: white !important;
 		text-decoration: none;
+	}
+	.center-modal {
+		position: absolute;
+		top: 15%;
 	}
 	</style>
 </head>
@@ -113,7 +123,7 @@
  							</div>
 							<div class="input-border">
 								<div class="input-field1">
-									<p style="color:black">wedding dates on Feb 12, 2023</p>
+									<p style="color:black">wedding dates on Des 02, 2023</p>
 									<p style="color:black">wedding time at 08.00 - 14.00</p>
 								</div>
 								<i class="fa fa-search icon" style="background-color: Transparent; border:none;"></i>
@@ -131,7 +141,7 @@
 					Mohon maaf apabila ada kesalahan dalam penulisan nama atau gelar
 				</span>
 				<div class="lihat-btn" style="margin-top: 10px;">
-					<a href="#" id="remove_splash"><i class="fa fa-gift"></i> Lihat Detail Undangan</a>
+					<a href="#" id="remove_splash" data-name="{{$tamu}}"><i class="fa fa-gift"></i> Lihat Detail Undangan</a>
 				</div>
 			</div>
 		</div>
@@ -156,8 +166,8 @@
 					Date
 				</h4>
 				<h4 class="date center-text uppercase">
-					<span>Feb</span>
-					<span>12</span>
+					<span>Des</span>
+					<span>02</span>
 					<span>2023</span>
 				</h4>
 				<div class="img-leaf">
@@ -169,9 +179,9 @@
 					<span>&</span><br>
 					<span>Reza Pratama, S.Kom</span>
 				</div>
-				<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/H7bCbyNA9NU2">
+				<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">
 					<i class="ico-location"></i>
-					<span>Islamic Centre<br>Bekasi</span>
+					<span>Pendopo Uti<br>Bekasi</span>
 				</a>
 			</div>
 		</div>
@@ -216,24 +226,25 @@
 							<span class="bawah">WIB</span>
 						</div>
 						<div class="tengah">
-							<span class="top uppercase">Feb</span>
-							<span class="midle">12</span>
+							<span class="top uppercase">Des</span>
+							<span class="midle">02</span>
 							<span class="down">2023</span>
 						</div>
 						<div class="kanan">
-							<span class="atas">Islamic Centre</span>
+							<span class="atas">Pendopo Uti</span>
 							<span class="bawah">Bekasi</span>
 						</div>
 					</div>
-					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/H7bCbyNA9NU2">
-						<span>Islamic Centre<br>Bekasi</span>
+					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">
+						<span>Pendopo Uti<br>Bekasi</span>
 					</a>
 				</div>
 				<div class="image-cover"></div>
 
 				<!-- /* add to calendar start  */ -->
 				<div class="addto-calendar">
-					<a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=Liana%20dan%20Yudhi%20Wedding&amp;dates=20220204T113000/20220204T130000&amp;details=Wedding%20Liana%20dan%20Yudhi%20Wedding%2011.30,%2006%20March%202021%20di%20Grand%20Ballroom,%20Lantai%202"><i class="fa fa-calendar "></i> &nbspSave The Date</a>
+					{{-- <a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=Liana%20dan%20Yudhi%20Wedding&amp;dates=20220204T113000/20220204T130000&amp;details=Wedding%20Liana%20dan%20Yudhi%20Wedding%2011.30,%2006%20March%202021%20di%20Grand%20Ballroom,%20Lantai%202"><i class="fa fa-calendar "></i> &nbspSave The Date</a> --}}
+					<a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=Ayu%20dan%20Reza%20Wedding&amp;dates=20231202T113000/20231202T130000&amp;details=Ayu%20dan%20Reza%20Wedding%2011.30,%2002%20December%202023%20di%20Pendopo%20Uti%20"><i class="fa fa-calendar "></i> &nbspSave The Date</a>
 				</div>
 				<!-- /* add to calendar end  */ -->
 
@@ -247,18 +258,18 @@
 							<span class="bawah">WIB</span>
 						</div>
 						<div class="tengah">
-							<span class="top uppercase">Feb</span>
-							<span class="midle">12</span>
+							<span class="top uppercase">Des</span>
+							<span class="midle">02</span>
 							<span class="down">2023</span>
 						</div>
 						<div class="kanan">
-							<span class="atas">Islamic Centre</span>
+							<span class="atas">Pendopo Uti</span>
 							<span class="bawah">Bekasi</span>
 						</div>
 					</div>
 
-					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/H7bCbyNA9NU2">
-						<span>Islamic Centre<br>Bekasi</span>
+					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">
+						<span>Pendopo Uti<br>Bekasi</span>
 					</a>
 				</div>
 				<!-- Display the countdown timer in an element -->
@@ -272,7 +283,7 @@
 				<div class="center-text wow zoomIn" data-wow-offset="150">
 					<script>
 						// Bulan - Tgl - Tahun
-						CountDownTimer('02/12/2023', 'countdate');
+						CountDownTimer('12/02/2023', 'countdate');
 
 						function CountDownTimer(dt, id) {
 							var end = new Date(dt);
@@ -316,9 +327,9 @@
 			<div class="acara center-text">
 			</div>
 			<div class="maps-full">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.136263919878!2d106.9940266!3d-6.2457677!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc700df9e96c02065!2sIslamic%20Centre%20Bekasi!5e0!3m2!1sid!2sid!4v1643549316109!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.676222527124!2d106.95025947430003!3d-6.306200961714244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993dd32a7247d%3A0xbb5f068ce2511dac!2sPendopo%20Uti!5e0!3m2!1sid!2sid!4v1685954880630!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			</div>
-			<a class="to-maps" href="https://goo.gl/maps/H7bCbyNA9NU2">Navigasi Google Maps</a>
+			<a class="to-maps" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">Navigasi Google Maps</a>
 		</div>
 		<!-- End Maps -->
 
@@ -347,8 +358,8 @@
 			</div>
 			<div class="wow slideInRight" data-wow-offset="50">
 				<amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
-				<div class="gallery gallery-square full-bottom">
-					<iframe src="{{url('gallery')}}" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">
+				<div class="gallery maps-full gallery-square full-bottom">
+					<iframe src="{{url('gallery')}}" allowfullscreen="" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">
 						Your browser doesn't support. try using chrome browser !
 					</iframe>
 				</div>
@@ -391,7 +402,7 @@
 				<p><i class="fa fa-gift"></i> Send Gift</p>
 			</div>
 			<div class="modal fade" id="modalContoh" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog" style="overflow-y: initial !important" role="document">
+				<div class="modal-dialog center-modal" style="overflow-y: initial !important" role="document">
 					<div class="modal-content">
 						<div class="modal-header text-light" style="background-color:#ffffff;">
 							<h5 class="modal-title" style="color: #4c4c4d !important;">
@@ -447,7 +458,7 @@
 		<div class="content">
 			<amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
 			<div class="gallery gallery-square full-bottom">
-				<iframe src="{{url('komentar?tamu='.$tamu)}}" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">Your browser isn't compatible</iframe>
+				<iframe src="{{url('komentar?tamu='.$tamu.'&'.'code_tamu='.$code_tamu.'&'.'alias='.$alias)}}" allowfullscreen="" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">Your browser isn't compatible</iframe>
 			</div>
 		</div>
 		<div class="footer-akad content">
@@ -510,6 +521,15 @@
 
 		$(document).ready(function() {
 			scrolldisabled();
+
+		function alignModal(){
+        	var modalDialog = $(this).find(".modal-dialog");
+        	modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
+    	}
+    	$(".modal").on("shown.bs.modal", alignModal);
+			$(window).on("resize", function(){
+				$(".modal:visible").each(alignModal);
+			});   
 		});
 
 		var x = document.getElementById("myAudio");
@@ -526,9 +546,14 @@
 		}
 
 		$("#remove_splash").on('click', function() {
-			$(".splash").attr('style', 'display:none; ');
-			scrollenabled();
-			playAudio();
+			console.log($(this).data("name"));
+			if($(this).data("name") == "Tamu Undangan"){
+				alert('Maaf, Anda bukan Tamu Undangan');
+			} else {
+				$(".splash").attr('style', 'display:none; ');
+				scrollenabled();
+				playAudio();
+			}
 		});
 
 		$(".copy-text").on('click', function() {

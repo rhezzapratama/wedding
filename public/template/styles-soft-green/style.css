@@ -1651,17 +1651,17 @@ h4{
 	font-size:30px;
 }
 .mempelai .fullname{
-	font-size:12px;
-	padding: 7px 0 6px 0;
+	font-size:18px;
+	padding: 6px 0 6px 0;
 	color: #4C4C4D;
 }
 
 .mempelai .bio small,
 .mempelai .bio{
 	display:block;
-	font-size:12px;
+	font-size:14px;
 	color: #4C4C4D;
-	line-height: 16px;
+	line-height: 22px;
 	padding-bottom:2px;
 }
 .mempelai .bio small{

@@ -23,6 +23,32 @@ body {
 .comments-list .media{
     border-bottom: 1px dotted #ccc;
 }
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 </style>
 </head>
 <body>
@@ -36,11 +62,13 @@ body {
                     <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="nama" id="nama" class="form-control" readonly data-error="Please enter title." maxlength="100" required value="{{$tamu}}" />
+                    <input type="text" name="nama" id="nama" class="form-control" readonly data-error="Please enter name." maxlength="100" required value="{{$tamu}}" />
+                    <input type="hidden" name="code" id="code" value="{{$code_tamu}}">
+                    <input type="hidden" name="alias" id="alias" value="{{$alias}}">
                     <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                    <select class="form-control" name="kehadiran" id="kehadiran">
+                    <select class="form-control" name="kehadiran" id="kehadiran" required>
                         <option value="" disabled selected>--- Kehadiran ---</option>
                         <option value="Ya">Ya</option>
                         <option value="Mungkin">Mungkin</option>
@@ -64,6 +92,9 @@ body {
     <ul id="pagination" class="pagination-sm"></ul>
 
 </div>
+<div class="loading-overlay">
+    <div class="loading-spinner"></div>
+</div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.3.1/jquery.twbsPagination.min.js"></script>
@@ -77,6 +108,10 @@ var current_page = 1;
 var total_page = 0;
 var is_ajax_fire = 0;
 manageData();
+
+$(document).ready(function() {
+    $(".loading-overlay").hide();
+});
 
 function manageData() {
     $.ajax({
@@ -142,6 +177,9 @@ $.each( data, function( key, value ){
 });
 $(".comments-list").html(rows);
 }
+$("#ucapan").on("input", function(){
+    $(this).val($(this).val().replace(/[^a-zA-Z.\s]/g, ''));
+  });
 
 $(".crud-submit").click(function(e){
     e.preventDefault();
@@ -149,16 +187,30 @@ $(".crud-submit").click(function(e){
     var nama = $('#nama').val();
     var kehadiran = $('#kehadiran').val();
     var ucapan = $('#ucapan').val();
-    $.ajax({
-        dataType: 'json',
-        type:'POST',
-        url: form_action,
-        data:{nama:nama, kehadiran:kehadiran, ucapan:ucapan}
-    }).done(function(data){
-        getPageData();
-        $(".modal").modal('hide');
-        toastr.success('Item Created Successfully.', 'Success Alert', {timeOut: 5000});
-    });
+    var code_tamu = $('#code').val();
+    var alias = $('#alias').val();
+    if (ucapan !== '' && kehadiran !== null) {
+        $.ajax({
+            dataType: 'json',
+            type:'POST',
+            url: form_action,
+            data: {nama:nama, kehadiran:kehadiran, ucapan:ucapan, code_tamu:code_tamu, alias:alias},
+            beforeSend: function() {
+                $(".loading-overlay").show();
+            }
+        }).done(function(data){
+            getPageData();
+            $(".modal").modal('hide');
+            $(".loading-overlay").hide();
+            if (data.responseCode == '00') {
+                toastr.success('Terima Kasih atas Ucapan dan Kehadirannya.', 'Success Alert', {timeOut: 5000});
+            } else {
+                toastr.error('Maaf, Anda Bukan Tamu Undangan.', 'Danger Alert', {timeOut: 5000});
+            }
+        });
+    } else {
+        toastr.error('Harap isi Ucapan dan Kehadiran.', 'Danger Alert', {timeOut: 5000});
+    }
 });
 
 </script> 

@@ -26,11 +26,13 @@ class ListTamuController extends Controller
                         return $button;
                     })->addColumn('send', function($data){
                         $nama_tamu = str_replace("&","%26",$data->nama);
+                        $url_tamu = $data->alias;
                         $tlp_substr = substr($data->no_tlp,1);
                         $tlp = '+62'.$tlp_substr;
-                        $url = 'http://ayudanreza.com/?tamu='.$data->id.'';
+                        $url = 'http://ayudanreza.com/?tamu='.$url_tamu.'';
                         $pesan = 'Assalamualaikum Wa Rahmatullahi Wa Barakaatuh%20%0ABismillahirahmanirrahim.%20%0A%0AYth.%20%0A*'.$nama_tamu.'*%20%0A%0ATanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami : %20%0A%0A*Sri Rahayu Gantini, S.T. %26 Reza Pratama, S.Kom.*%20%0A%0ABerikut link undangan kami untuk info lengkap dari acara bisa kunjungi:%20%0A'.$url.'%20%0A%0AMerupakan suatu kebahagiaan apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.%20%0ASaudara/i juga dapat mengisi Ucapan dan Konfirmasi kehadiran di Wedding Wish. Terima Kasih. %20%0A%0AWassalamualaikum Wa Rahmatullahi Wa Barakaatuh %20%0A%0AHormat kami,%20%0AAyu %26 Reza';
-                        $button = '<a href="https://api.whatsapp.com/send?phone='.$tlp.'&text='.$pesan.'" target="_blank" type="button" name="whatsapp" class="btn btn-success btn-sm btn-block">Whatsapp</a>';
+                        // $button = '<a href="https://api.whatsapp.com/send?phone='.$tlp.'&text='.$pesan.'" target="_blank" type="button" name="whatsapp" class="btn btn-success btn-sm btn-block">Whatsapp</a>';
+                        $button = '<a href="https://web.whatsapp.com/send/?phone='.$tlp.'&text='.$pesan.'" target="_blank" type="button" name="whatsapp" class="btn btn-success btn-sm btn-block">Whatsapp</a>';
                         return $button;
                     })
                     ->rawColumns(['action', 'send'])
@@ -43,8 +45,8 @@ class ListTamuController extends Controller
     {
         $rules = array(
             'nama' => 'required',
-            'no_tlp' => 'required'
-            //'pesan' => 'required'   
+            'no_tlp' => 'required',
+            'tamu' => 'required'   
         );
 
         $error = Validator::make($request->all(), $rules);
@@ -54,10 +56,16 @@ class ListTamuController extends Controller
             return response()->json(['errors' => $error->errors()->all()]);
         }
 
+        $text = $request->nama;
+        $text = str_replace(' ', '-', $text);
+        $text = str_replace('&', 'dan', $text);
+        $alias = strtolower($text);
+
         $form_data = array(
             'nama' => $request->nama,
             'no_tlp' => $request->no_tlp,
-            'pesan' => $request->pesan
+            'tamu' => $request->tamu,
+            'alias' => $alias
         );
 
         ListTamu::create($form_data);
@@ -78,8 +86,9 @@ class ListTamuController extends Controller
     public function update(Request $request)
     {
         $rules = array(
-            'nama'    =>  'required',
-            'no_tlp'     =>  'required'
+            'nama' =>  'required',
+            'no_tlp' =>  'required',
+            'tamu' =>  'required'
         );
 
         $error = Validator::make($request->all(), $rules);
@@ -89,9 +98,16 @@ class ListTamuController extends Controller
             return response()->json(['errors' => $error->errors()->all()]);
         }
 
+        $text = $request->nama;
+        $text = str_replace(' ', '-', $text);
+        $text = str_replace('&', 'dan', $text);
+        $alias = strtolower($text);
+
         $form_data = array(
-            'nama'       =>   $request->nama,
-            'no_tlp'        =>   $request->no_tlp
+            'nama' => $request->nama,
+            'no_tlp' => $request->no_tlp,
+            'tamu' => $request->tamu,
+            'alias' => $alias
         );
         ListTamu::whereId($request->hidden_id)->update($form_data);
 

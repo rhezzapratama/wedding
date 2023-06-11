@@ -17,6 +17,8 @@ class CreateListTamusTable extends Migration
             $table->increments('id');
             $table->string('nama');
             $table->string('no_tlp');
+            $table->string('alias');
+            $table->string('tamu');
             $table->timestamps();
         });
     }

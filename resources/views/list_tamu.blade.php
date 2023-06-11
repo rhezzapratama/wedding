@@ -20,6 +20,7 @@
                             <tr>
                                 <th width="25%">Nama Tamu</th>
                                 <th width="20%">Telephone / WA</th>
+                                <th width="20%">Tamu</th>
                                 <th width="35%">Action</th>
                                 <th width="35%">Send</th>
                             </tr>
@@ -53,6 +54,17 @@
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Telephone / WA :</label>
                             <input type="text" class="form-control" name="no_tlp" id="no_tlp">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Tamu :</label>
+                            <select class="form-control" name="tamu">
+                                <option value="">-- Pilih Tamu --</option>
+                                <option value="Ayu">Ayu</option>
+                                <option value="Mamah">Mamah</option> 
+                                <option value="Reza">Reza</option> 
+                                <option value="Ayah">Ayah</option> 
+                                <option value="Ibu">Ibu</option> 
+                            </select>
                         </div>
                         <br />
                         <div class="form-group" align="center">
@@ -107,6 +119,10 @@
                 name: 'no_tlp'
             },
             {
+                data: 'tamu',
+                name: 'tamu'
+            },
+            {
                 data: 'action',
                 name: 'action',
                 orderable: false
@@ -146,7 +162,7 @@
                         }
         
                         if(data.success){
-                            html = '<div class="alert alert-success">' + data.success + '</div>';
+                            html = '<div class="alert alert-success alert-dismissible fade show" role="alert">' + data.success + ' <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>';
                             $('#sample_form')[0].reset();
                             $('#user_table').DataTable().ajax.reload();
                         }
@@ -174,7 +190,7 @@
                             html += '</div>';
                         }
                         if(data.success){
-                            html = '<div class="alert alert-success">' + data.success + '</div>';
+                            html = '<div class="alert alert-success">' + data.success + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>';
                             $('#sample_form')[0].reset();
                             $('#store_image').html('');
                             $('#user_table').DataTable().ajax.reload();
