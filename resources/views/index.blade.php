@@ -18,6 +18,7 @@
 	<script async custom-element="amp-carousel" src="{{ asset('template/assets/amp/js/amp-carousel-0.1.js') }}"></script>
 	<script async custom-element="amp-image-lightbox" src="{{ asset('template/assets/amp/js/amp-image-lightbox-0.1.js') }}"></script>
 	<script async custom-element="amp-youtube" src="{{ asset('template/assets/amp/js/amp-youtube-0.1.js') }}"></script>
+	<script src="{{ asset('template/clipboard/clipboard.min.js') }}"></script>
 
 	<!--AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself.-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -99,6 +100,24 @@
 	.center-modal {
 		position: absolute;
 		top: 15%;
+	}
+
+	.box-gift{
+		margin-top:6px;
+		border: 2px solid #4285F4;
+		border-radius: 7px;
+	}
+
+	.header-box-gift{
+		background: #4285F4;
+		color: #fff;
+		padding: 6px;;
+		letter-spacing: 1px;
+	}
+
+	.content-box-gift{
+		padding: 12px;
+		font-size: 14px;
 	}
 	</style>
 </head>
@@ -336,7 +355,7 @@
 		<!-- Start Gallery  -->
 		<div id="gallery" class="page-content-scroll">
 			<!-- virtual wedding start  -->
-			<div class="heading-box wow slideInLeft" data-wow-offset="350">
+			{{-- <div class="heading-box wow slideInLeft" data-wow-offset="350">
 				<h3 class="center-text">
 					<span class="cg">P</span><span class="cg">r</span><span class="cg">e</span><span class="cg">w</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
 					<span class="cg">C</span><span class="cg">l</span><span class="cg">i</span><span class="cg">p</span>
@@ -348,7 +367,7 @@
 					<amp-img src="{{ asset('template/assets/img/videoc4ca.png?1') }}" width="700" height="421" placeholder layout="fill" />
 				</amp-youtube>
 			</div>
-			<br><br><br><br>
+			<br><br><br><br> --}}
 			<!-- virtual wedding end  -->
 			<div class="heading-box wow slideInRight" data-wow-offset="150">
 				<h3 class="center-text">
@@ -392,59 +411,40 @@
 			</div>
 			<!-- protokol kesehatan end  -->
 			<!-- wedding gift -->
-			<div class="heading-box wow bounceIn" data-wow-offset="250">
+			<div class="heading-box wow pulse" data-wow-offset="250" data-wow-iteration="infinite">
 				<h3 class="center-text">
 					<span class="cg">W</span><span class="cg">e</span><span class="cg">d</span><span class="cg">d</span><span class="cg">i</span><span class="cg">n</span><span class="cg">g</span>
 					<span class="cg">G</span><span class="cg">i</span><span class="cg">f</span><span class="cg">t</span>
 				</h3>
 			</div>
-			<div class="lihat-btn center-text wow pulse" data-wow-offset="250" data-wow-iteration="infinite" data-toggle="modal" data-target="#modalContoh" data-backdrop="static" data-keyboard="false">
-				<p><i class="fa fa-gift"></i> Send Gift</p>
+			<div class="content center-text wow bounceIn" data-wow-offset="150">
+				<h5>BCA</h5>
+				<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
+				<div id="rekbca" style="margin-bottom:6px;">2100130826</div>
+				<div style="margin-top:6px;">
+					<button class="btn btn-sm btn-bca" onclick="bcarek()" style="background:#34A853 !important; color:white!important;"><i class="fa fa-copy"></i>&nbsp; Salin No Rekening</button>
+				</div>
+				<br/>
+				<h5>BRI</h5>
+				<div style="margin-bottom:6px;">Reza Pratama</div>
+				<div id="rekbri" style="margin-bottom:6px;">204601000610534</div>
+				<div style="margin-top:6px;">
+					<button class="btn btn-sm btn-bri" onclick="brirek()" style="background:#EA4335!important; color:white!important;" value="204601000610534"><i class="fa fa-copy"></i>&nbsp; Salin No Rekening</button>
+				</div>
 			</div>
-			<div class="modal fade" id="modalContoh" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog center-modal" style="overflow-y: initial !important" role="document">
-					<div class="modal-content">
-						<div class="modal-header text-light" style="background-color:#ffffff;">
-							<h5 class="modal-title" style="color: #4c4c4d !important;">
-								<b>
-									<span class="cg">S</span><span class="cg">e</span><span class="cg">n</span class="cg"><span class="cg">d</span>
-									<span class="cg">G</span><span class="cg">i</span><span class="cg">f</span><span class="cg">t</span>
-								</b>
-							</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          						<span aria-hidden="true">&times;</span>
-        					</button>
-						</div>
-						<div class="modal-body" style="height: 400px; overflow-y: auto;">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="img center-text">
-										<h5 style="color: ">BCA</h5>
-										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
-										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-bca.jpeg') }}" alt="" style="width:100%">
-										<div style="margin-top:6px;">
-											<button class="btn btn-sm copy-text" style="background:#34A853 !important; color:white!important;" value="2100130826">2100130826</button>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="img center-text">
-										<h5>OVO</h5>
-										<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
-										<img class="img-thumbnail" src="{{ asset('template/assets/img/barcode-ovo.jpeg') }}" alt="" style="width:100%">
-										<div style="margin-top:6px;">
-											<button class="btn btn-sm copy-text" style="background:#EA4335!important; color:white!important;" value="081293129163">081293129163</button>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-12 center-text">
-									<div style="margin-top:6px;">
-										<small style="color:#6e7376;">Sebelumnya, kami ucapkan terimakasih atas perhatian dan bentuk tanda cinta Bapak/Ibu/Saudara/i untuk kami</small>
-									</div>
-								</div>	
-							</div>
-						</div>
+			<br>
+			<div class="content center-text wow bounceIn" data-wow-offset="150">
+				<div class="box-gift">
+					<div class="header-box-gift">
+						<span><i class="fa fa-gift"></i>&nbsp; Send Gift</span>
 					</div>
+					<div class="content-box-gift">
+						Ayu <br> 081293129163 <br>
+						Jl. Satopati No.72, Rt.001 / Rw. 001, Bantar Gebang, Kota Bekasi, Jawa Barat 17151
+					</div>
+				</div>
+				<div style="margin-top:6px;">
+					<small style="color:#6e7376;">Sebelumnya, kami ucapkan terimakasih atas perhatian dan bentuk tanda cinta Bapak/Ibu/Saudara/i untuk kami</small>
 				</div>
 			</div>
 			<!-- wedding gift end -->
@@ -496,6 +496,41 @@
 			}
 		}
 
+		var bcaToastrShown = false;
+		var briToastrShown = false;
+
+		function bcarek() {
+			if (!bcaToastrShown) {
+				var clipboard = new ClipboardJS('.btn-bca', {
+					target: function () {
+						return document.querySelector('#rekbca');
+					},
+				});
+
+				clipboard.on('success', function (e) {
+					toastr.clear();
+					toastr.success('No. Rekening BCA, Copied!', 'Success Alert');
+					bcaToastrShown = true;
+				});
+			}
+		}
+
+		function brirek() {
+			if (!briToastrShown) {
+				var clipboard = new ClipboardJS('.btn-bri', {
+				target: function () {
+					return document.querySelector('#rekbri');
+				},
+				});
+
+				clipboard.on('success', function (e) {
+					toastr.clear();
+					toastr.success('No. Rekening BRI, Copied!', 'Success Alert');
+					briToastrShown = true;
+				});
+			}
+		}
+
 		function scrollenabled(){
 			window.removeEventListener('DOMMouseScroll', preventDefault, false);
 			window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
@@ -521,15 +556,7 @@
 
 		$(document).ready(function() {
 			scrolldisabled();
-
-		function alignModal(){
-        	var modalDialog = $(this).find(".modal-dialog");
-        	modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
-    	}
-    	$(".modal").on("shown.bs.modal", alignModal);
-			$(window).on("resize", function(){
-				$(".modal:visible").each(alignModal);
-			});   
+			$(window).scrollTop(0);  
 		});
 
 		var x = document.getElementById("myAudio");
@@ -546,7 +573,6 @@
 		}
 
 		$("#remove_splash").on('click', function() {
-			console.log($(this).data("name"));
 			if($(this).data("name") == "Tamu Undangan"){
 				alert('Maaf, Anda bukan Tamu Undangan');
 			} else {
@@ -556,28 +582,13 @@
 			}
 		});
 
-		$(".copy-text").on('click', function() {
-			var copyText = $(this).val();
-			navigator.clipboard.writeText(copyText);
-			toastr.success('Copied!', 'Success Alert', {timeOut: 5000});
-		});
-
-		$('.modal').on('show.bs.modal', function (e) {
-     		$('.modal .modal-dialog').attr('class', 'modal-dialog  animated zoomInDown');
-		})
-  		$('.modal').on('hide.bs.modal', function (e) {
-   			$('.modal .modal-dialog').attr('class', 'modal-dialog  animated flipOutX');
-		})
-
-		wow = new WOW(
-			{
-			boxClass:     'wow',      // default
-			animateClass: 'animated', // default
-			offset:       0,          // default
-			mobile:       true,       // default
-			live:         true        // default
-		}
-		)
+		wow = new WOW({
+				boxClass:     'wow',      // default
+				animateClass: 'animated', // default
+				offset:       0,          // default
+				mobile:       true,       // default
+				live:         true        // default
+			})
 		wow.init();
 	</script>
 </body>

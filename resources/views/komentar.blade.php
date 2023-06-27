@@ -181,7 +181,8 @@ $("#ucapan").on("input", function(){
     $(this).val($(this).val().replace(/[^a-zA-Z.\s]/g, ''));
   });
 
-$(".crud-submit").click(function(e){
+var toastrShown = false;
+$(".crud-submit").click(function(e) {
     e.preventDefault();
     var form_action = $("#create-item").find("form").attr("action");
     var nama = $('#nama').val();
@@ -189,27 +190,49 @@ $(".crud-submit").click(function(e){
     var ucapan = $('#ucapan').val();
     var code_tamu = $('#code').val();
     var alias = $('#alias').val();
+
     if (ucapan !== '' && kehadiran !== null) {
         $.ajax({
             dataType: 'json',
-            type:'POST',
+            type: 'POST',
             url: form_action,
-            data: {nama:nama, kehadiran:kehadiran, ucapan:ucapan, code_tamu:code_tamu, alias:alias},
+            data: {
+            nama: nama,
+            kehadiran: kehadiran,
+            ucapan: ucapan,
+            code_tamu: code_tamu,
+            alias: alias
+            },
             beforeSend: function() {
-                $(".loading-overlay").show();
+            $(".loading-overlay").show();
             }
-        }).done(function(data){
+        }).done(function(data) {
             getPageData();
             $(".modal").modal('hide');
             $(".loading-overlay").hide();
             if (data.responseCode == '00') {
-                toastr.success('Terima Kasih atas Ucapan dan Kehadirannya.', 'Success Alert', {timeOut: 5000});
+            $('#ucapan').val('');
+            $('#kehadiran').val('');
+            var toastrShown = false;
+            if (!toastrShown) {
+                    toastrShown = true;
+                    toastr.clear();
+                    toastr.success('Terima Kasih atas Ucapan dan Kehadirannya.');
+                }
             } else {
-                toastr.error('Maaf, Anda Bukan Tamu Undangan.', 'Danger Alert', {timeOut: 5000});
+                if (!toastrShown) {
+                    toastrShown = true;
+                    toastr.clear();
+                    toastr.error('Maaf, Anda Bukan Tamu Undangan.', 'Danger Alert');
+                }
             }
         });
     } else {
-        toastr.error('Harap isi Ucapan dan Kehadiran.', 'Danger Alert', {timeOut: 5000});
+        if (!toastrShown) {
+            toastrShown = true;
+            toastr.clear();
+            toastr.error('Harap isi Ucapan dan Kehadiran.', 'Danger Alert');
+        }
     }
 });
 
