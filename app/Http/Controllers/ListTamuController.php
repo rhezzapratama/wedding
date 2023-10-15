@@ -46,7 +46,7 @@ class ListTamuController extends Controller
                         $pesan .= '*' . $nama1 . ' %26 ' . $nama2 . '*%20%0A%0A';
                         $pesan .= 'Berikut link undangan kami untuk info lengkap dari acara bisa kunjungi:%20%0A' . $url . '%20%0A%0AMerupakan suatu kebahagiaan apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.%20%0ASaudara/i juga dapat mengisi Ucapan dan Konfirmasi kehadiran di Wedding Wish. Terima Kasih. %20%0A%0AWassalamualaikum Wa Rahmatullahi Wa Barakaatuh %20%0A%0AHormat kami,%20%0A'.$namaalias1.' %26 '.$namaalias2;
                         // $button = '<a href="https://api.whatsapp.com/send?phone='.$tlp.'&text='.$pesan.'" target="_blank" type="button" name="whatsapp" class="btn btn-success btn-sm btn-block">Whatsapp</a>';
-                        $button = '<a href="https://web.whatsapp.com/send/?phone='.$tlp.'&text='.$pesan.'" target="_blank" type="button" name="whatsapp" class="btn btn-success btn-sm btn-block">Whatsapp</a>';
+                        $button = '<a href="https://api.whatsapp.com/send?phone='.$tlp.'&text='.$pesan.'" target="_blank" type="button" name="whatsapp" class="btn btn-success btn-sm btn-block">Whatsapp</a>';
                         return $button;
                     })
                     ->rawColumns(['action', 'send'])
