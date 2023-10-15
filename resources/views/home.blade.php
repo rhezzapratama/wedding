@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <center>
+                        You are logged in! <br>
+                        <a href="{{url('/list-tamu')}}" class="btn btn-lg btn-primary">Input List Tamu</a>
+                    </center>
                 </div>
             </div>
         </div>

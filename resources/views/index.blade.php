@@ -137,13 +137,13 @@
 					<div class="container">
 						<div class="row">
 							<div class="input-border">
-    							<input class="input-field" type="text" value="Ayu & Reza" disabled>
+    							<input class="input-field" type="text" value="@if($tgl == '02') Ayu & Reza @else Reza & Ayu @endif" disabled>
    					 			<i class="fa fa-search icon"></i>
  							</div>
 							<div class="input-border">
 								<div class="input-field1">
-									<p style="color:black">wedding dates on Des 02, 2023</p>
-									<p style="color:black">wedding time at 08.00 - 14.00</p>
+									<p style="color:black">wedding date on Dec {{$tgl}}, 2023</p>
+									<p style="color:black">wedding time at @if($tgl == '02') 08.00 - 13.00 @else 09.00 - 20.00 @endif</p>
 								</div>
 								<i class="fa fa-search icon" style="background-color: Transparent; border:none;"></i>
 							</div>
@@ -185,8 +185,8 @@
 					Date
 				</h4>
 				<h4 class="date center-text uppercase">
-					<span>Des</span>
-					<span>02</span>
+					<span>Dec</span>
+					<span>@if($tgl == '02') 02 @else 16 @endif</span>
 					<span>2023</span>
 				</h4>
 				<div class="img-leaf">
@@ -194,14 +194,27 @@
 				</div>
 				<div class="greeting center-text uppercase">The wedding of</div>
 				<div class="home-name center-text uppercase">
-					<span>Sri Rahayu Gantini, S.T</span> <br>
-					<span>&</span><br>
-					<span>Reza Pratama, S.Kom</span>
+					@if($tgl == '02') 
+						<span>Sri Rahayu Gantini, S.T</span> <br>
+						<span>&</span><br>
+						<span>Reza Pratama, S.Kom</span>
+					@else 
+						<span>Reza Pratama, S.Kom</span> <br>
+						<span>&</span><br>
+						<span>Sri Rahayu Gantini, S.T</span>
+					@endif
 				</div>
-				<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">
-					<i class="ico-location"></i>
-					<span>Pendopo Uti<br>Bekasi</span>
-				</a>
+				@if($tgl == '02') 
+					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">
+						<i class="ico-location"></i>
+						<span>Pendopo Uti<br>Bekasi</span>
+					</a>
+				@else 
+					<a class="location center-text" style="text-decoration:none;" href="https://maps.app.goo.gl/QFkacqxwgkHTpYLC6">
+						<i class="ico-location"></i>
+						<span>Aula Ken Arok<br>Citayam</span>
+					</a>
+				@endif
 			</div>
 		</div>
 		<!-- End Index  -->
@@ -216,25 +229,47 @@
 			</div>
 			<div class="mempelai-text">
 				<div class="mempelai cwe wow fadeInRight" data-wow-duration="2s" data-wow-offset="400">
-					<div class="img">
-						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwe.png') }}" width="250" height="250" layout="responsive"></amp-img>
-					</div>
-					<div class="detail">
-						<h3 style="color:#FBBC05">Ayu</h3>
-						<div class="fullname"><br>Sri Rahayu Gantini, S.T</div>
-						<div class="bio">
-							Putri Kedua dari <br>Bapak Uci Sanusi & <br>Ibu Eti Roswiati</div>
-					</div>
+					@if($tgl == '02')
+						<div class="img">
+							<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwe.png') }}" width="250" height="250" layout="responsive"></amp-img>
+						</div>
+						<div class="detail">
+							<h3 style="color:#FBBC05">Ayu</h3>
+							<div class="fullname"><br>Sri Rahayu Gantini, S.T</div>
+							<div class="bio">Putri dari <br>Bapak Uci Sanusi & <br>Ibu Eti Roswiati</div>
+						</div>
+					@else
+						<div class="img">
+							<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwo.png') }}" width="250" height="250" layout="responsive"></amp-img>
+						</div>
+						<div class="detail">
+							<h3 style="color:#34A853">Reza</h3>
+							<div class="fullname"><br>Reza Pratama, S.Kom</div>
+							<div class="bio">Putra dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
+						</div>
+					@endif
+
 				</div>
 				<div class="mempelai cwo wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="250">
-					<div class="img">
-						<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwo.png') }}" width="250" height="250" layout="responsive"></amp-img>
-					</div>
-					<div class="detail">
-						<h3 style="color:#34A853">Reza</h3>
-						<div class="fullname"><br>Reza Pratama, S.Kom</div>
-						<div class="bio">Putra Tunggal dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
-					</div>
+					@if($tgl == '02')
+						<div class="img">
+							<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwo.png') }}" width="250" height="250" layout="responsive"></amp-img>
+						</div>
+						<div class="detail">
+							<h3 style="color:#34A853">Reza</h3>
+							<div class="fullname"><br>Reza Pratama, S.Kom</div>
+							<div class="bio">Putra dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
+						</div>
+					@else
+						<div class="img">
+							<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/cwe.png') }}" width="250" height="250" layout="responsive"></amp-img>
+						</div>
+						<div class="detail">
+							<h3 style="color:#FBBC05">Ayu</h3>
+							<div class="fullname"><br>Sri Rahayu Gantini, S.T</div>
+							<div class="bio">Putri dari <br>Bapak Uci Sanusi & <br>Ibu Eti Roswiati</div>
+						</div>
+					@endif
 				</div>
 				<div class="acara center-text wow zoomIn" data-wow-offset="230">
 					<h3><span class="cg" style="padding:2px">A</span><span class="cg" style="padding:2px">k</span><span class="cg" style="padding:2px">a</span><span class="cg" style="padding:2px">d</span></h3>
@@ -245,7 +280,7 @@
 							<span class="bawah">WIB</span>
 						</div>
 						<div class="tengah">
-							<span class="top uppercase">Des</span>
+							<span class="top uppercase">Dec</span>
 							<span class="midle">02</span>
 							<span class="down">2023</span>
 						</div>
@@ -259,37 +294,56 @@
 					</a>
 				</div>
 				<div class="image-cover"></div>
-
-				<!-- /* add to calendar start  */ -->
-				<div class="addto-calendar">
-					{{-- <a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=Liana%20dan%20Yudhi%20Wedding&amp;dates=20220204T113000/20220204T130000&amp;details=Wedding%20Liana%20dan%20Yudhi%20Wedding%2011.30,%2006%20March%202021%20di%20Grand%20Ballroom,%20Lantai%202"><i class="fa fa-calendar "></i> &nbspSave The Date</a> --}}
-					<a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=Ayu%20dan%20Reza%20Wedding&amp;dates=20231202T113000/20231202T130000&amp;details=Ayu%20dan%20Reza%20Wedding%2011.30,%2002%20December%202023%20di%20Pendopo%20Uti%20"><i class="fa fa-calendar "></i> &nbspSave The Date</a>
-				</div>
-				<!-- /* add to calendar end  */ -->
-
+				@if($tgl =='02')	
+					<!-- /* add to calendar start  */ -->
+					<div class="addto-calendar">
+						<a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=Ayu%20dan%20Reza%20Wedding&amp;dates=20231202T113000/20231202T130000&amp;details=Ayu%20dan%20Reza%20Wedding%2011.30,%2002%20December%202023%20di%20Pendopo%20Uti%20"><i class="fa fa-calendar "></i> &nbspSave The Date</a>
+					</div>
+					<!-- /* add to calendar end  */ -->
+				@endif
 				<br>
 				<div class="acara center-text wow zoomInDown" data-wow-offset="170">
 					<h3><span class="cg">R</span><span class="cg">e</span><span class="cg">c</span><span class="cg">e</span><span class="cg">p</span><span class="cg">t</span><span class="cg">i</span><span class="cg">o</span><span class="cg" >n</span>
 					</h3>
-					<div class="acara-detail">
-						<div class="kiri">
-							<span class="atas">11.30 - 13.00</span>
-							<span class="bawah">WIB</span>
+					@if($tgl == '02')
+						<div class="acara-detail">
+							<div class="kiri">
+								<span class="atas">11.00 - 13.00</span>
+								<span class="bawah">WIB</span>
+							</div>
+							<div class="tengah">
+								<span class="top uppercase">Dec</span>
+								<span class="midle">02</span>
+								<span class="down">2023</span>
+							</div>
+							<div class="kanan">
+								<span class="atas">Pendopo Uti</span>
+								<span class="bawah">Bekasi</span>
+							</div>
 						</div>
-						<div class="tengah">
-							<span class="top uppercase">Des</span>
-							<span class="midle">02</span>
-							<span class="down">2023</span>
+						<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">
+							<span>Pendopo Uti<br>Bekasi</span>
+						</a>
+					@else
+						<div class="acara-detail">
+							<div class="kiri">
+								<span class="atas">09.00 - 20.00</span>
+								<span class="bawah">WIB</span>
+							</div>
+							<div class="tengah">
+								<span class="top uppercase">Dec</span>
+								<span class="midle">16</span>
+								<span class="down">2023</span>
+							</div>
+							<div class="kanan">
+								<span class="atas">Aula Ken Arok</span>
+								<span class="bawah">Citayam</span>
+							</div>
 						</div>
-						<div class="kanan">
-							<span class="atas">Pendopo Uti</span>
-							<span class="bawah">Bekasi</span>
-						</div>
-					</div>
-
-					<a class="location center-text" style="text-decoration:none;" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">
-						<span>Pendopo Uti<br>Bekasi</span>
-					</a>
+						<a class="location center-text" style="text-decoration:none;" href="https://maps.app.goo.gl/QFkacqxwgkHTpYLC6">
+							<span>Aula Ken Arok<br>Citayam</span>
+						</a>
+					@endif
 				</div>
 				<!-- Display the countdown timer in an element -->
 				<div class="heading-box count">
@@ -302,7 +356,8 @@
 				<div class="center-text wow zoomIn" data-wow-offset="150">
 					<script>
 						// Bulan - Tgl - Tahun
-						CountDownTimer('12/02/2023', 'countdate');
+						var tgl = '<?= $tgl; ?>';
+						CountDownTimer('12/'+tgl+'/2023', 'countdate');
 
 						function CountDownTimer(dt, id) {
 							var end = new Date(dt);
@@ -345,10 +400,17 @@
 		<div id="maps" class="page-content-scroll">
 			<div class="acara center-text">
 			</div>
-			<div class="maps-full">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.676222527124!2d106.95025947430003!3d-6.306200961714244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993dd32a7247d%3A0xbb5f068ce2511dac!2sPendopo%20Uti!5e0!3m2!1sid!2sid!4v1685954880630!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-			</div>
-			<a class="to-maps" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">Navigasi Google Maps</a>
+			@if($tgl == '02')
+				<div class="maps-full">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.676222527124!2d106.95025947430003!3d-6.306200961714244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993dd32a7247d%3A0xbb5f068ce2511dac!2sPendopo%20Uti!5e0!3m2!1sid!2sid!4v1685954880630!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+				<a class="to-maps" href="https://goo.gl/maps/BTiSQNEM3Z6KWXFa9">Navigasi Google Maps</a>
+			@else
+				<div class="maps-full">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1339423894715!2d106.8023383177605!3d-6.453586217593793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e9ef7d469c51%3A0x15e20b84060934b!2sAULA%20KEN%20AROK!5e0!3m2!1sid!2sid!4v1696349250470!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+				<a class="to-maps" href="https://maps.app.goo.gl/QFkacqxwgkHTpYLC6">Navigasi Google Maps</a>
+			@endif
 		</div>
 		<!-- End Maps -->
 
@@ -433,20 +495,22 @@
 				</div>
 			</div>
 			<br>
-			<div class="content center-text wow bounceIn" data-wow-offset="150">
-				<div class="box-gift">
-					<div class="header-box-gift">
-						<span><i class="fa fa-gift"></i>&nbsp; Send Gift</span>
+			@if($tgl == '02')
+				<div class="content center-text wow bounceIn" data-wow-offset="150">
+					<div class="box-gift">
+						<div class="header-box-gift">
+							<span><i class="fa fa-gift"></i>&nbsp; Send Gift</span>
+						</div>
+						<div class="content-box-gift">
+							Ayu <br> 081293129163 <br>
+							Jl. Satopati No.72, Rt.001 / Rw. 001, Bantar Gebang, Kota Bekasi, Jawa Barat 17151
+						</div>
 					</div>
-					<div class="content-box-gift">
-						Ayu <br> 081293129163 <br>
-						Jl. Satopati No.72, Rt.001 / Rw. 001, Bantar Gebang, Kota Bekasi, Jawa Barat 17151
+					<div style="margin-top:6px;">
+						<small style="color:#6e7376;">Sebelumnya, kami ucapkan terimakasih atas perhatian dan bentuk tanda cinta Bapak/Ibu/Saudara/i untuk kami</small>
 					</div>
 				</div>
-				<div style="margin-top:6px;">
-					<small style="color:#6e7376;">Sebelumnya, kami ucapkan terimakasih atas perhatian dan bentuk tanda cinta Bapak/Ibu/Saudara/i untuk kami</small>
-				</div>
-			</div>
+			@endif
 			<!-- wedding gift end -->
 		</div>
 		<div class="heading-box wow bounceIn" data-wow-offset="150">

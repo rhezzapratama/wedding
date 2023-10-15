@@ -8,6 +8,6 @@ class ListTamu extends Model
 {
     //
     protected $fillable = [
-        'nama', 'no_tlp', 'alias', 'tamu'
+        'nama', 'no_tlp', 'alias', 'tamu', 'tgl'
        ];
 }

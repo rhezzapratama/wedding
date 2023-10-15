@@ -14,6 +14,7 @@ class BerandaController extends Controller
         $tamu = $obj->nama??'Tamu Undangan';
         $code_tamu = $obj->id??'';
         $alias = $obj->alias??'';
-        return view('index', ['tamu' => $tamu, 'code_tamu' => $code_tamu, 'alias' => $alias]);
+        $tgl = $obj->tgl??'02';
+        return view('index', ['tamu' => $tamu, 'code_tamu' => $code_tamu, 'alias' => $alias, 'tgl' => $tgl]);
     }
 }

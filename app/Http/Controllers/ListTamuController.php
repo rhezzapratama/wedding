@@ -29,8 +29,22 @@ class ListTamuController extends Controller
                         $url_tamu = $data->alias;
                         $tlp_substr = substr($data->no_tlp,1);
                         $tlp = '+62'.$tlp_substr;
-                        $url = 'http://ayudanreza.com/?tamu='.$url_tamu.'';
-                        $pesan = 'Assalamualaikum Wa Rahmatullahi Wa Barakaatuh%20%0ABismillahirahmanirrahim.%20%0A%0AYth.%20%0A*'.$nama_tamu.'*%20%0A%0ATanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami : %20%0A%0A*Sri Rahayu Gantini, S.T. %26 Reza Pratama, S.Kom.*%20%0A%0ABerikut link undangan kami untuk info lengkap dari acara bisa kunjungi:%20%0A'.$url.'%20%0A%0AMerupakan suatu kebahagiaan apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.%20%0ASaudara/i juga dapat mengisi Ucapan dan Konfirmasi kehadiran di Wedding Wish. Terima Kasih. %20%0A%0AWassalamualaikum Wa Rahmatullahi Wa Barakaatuh %20%0A%0AHormat kami,%20%0AAyu %26 Reza';
+                        $url = 'http://ayudanreza.my.id/?tamu='.$url_tamu.'';
+                        $tgl = $data->tgl;
+                        $pesan = 'Assalamualaikum Wa Rahmatullahi Wa Barakaatuh%20%0ABismillahirahmanirrahim.%20%0A%0AYth.%20%0A*' . $nama_tamu . '*%20%0A%0ATanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami : %20%0A%0A';
+                        if ($tgl == '02') {
+                            $nama1 = 'Sri Rahayu Gantini, S.T.';
+                            $nama2 = 'Reza Pratama, S.Kom.';
+                            $namaalias1 = 'Ayu';
+                            $namaalias2 = 'Reza';
+                        } else {
+                            $nama1 = 'Reza Pratama, S.Kom.';
+                            $nama2 = 'Sri Rahayu Gantini, S.T.';
+                            $namaalias1 = 'Reza';
+                            $namaalias2 = 'Ayu';
+                        }
+                        $pesan .= '*' . $nama1 . ' %26 ' . $nama2 . '*%20%0A%0A';
+                        $pesan .= 'Berikut link undangan kami untuk info lengkap dari acara bisa kunjungi:%20%0A' . $url . '%20%0A%0AMerupakan suatu kebahagiaan apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.%20%0ASaudara/i juga dapat mengisi Ucapan dan Konfirmasi kehadiran di Wedding Wish. Terima Kasih. %20%0A%0AWassalamualaikum Wa Rahmatullahi Wa Barakaatuh %20%0A%0AHormat kami,%20%0A'.$namaalias1.' %26 '.$namaalias2;
                         // $button = '<a href="https://api.whatsapp.com/send?phone='.$tlp.'&text='.$pesan.'" target="_blank" type="button" name="whatsapp" class="btn btn-success btn-sm btn-block">Whatsapp</a>';
                         $button = '<a href="https://web.whatsapp.com/send/?phone='.$tlp.'&text='.$pesan.'" target="_blank" type="button" name="whatsapp" class="btn btn-success btn-sm btn-block">Whatsapp</a>';
                         return $button;
@@ -46,7 +60,8 @@ class ListTamuController extends Controller
         $rules = array(
             'nama' => 'required',
             'no_tlp' => 'required',
-            'tamu' => 'required'   
+            'tamu' => 'required',   
+            'tgl' => 'required',   
         );
 
         $error = Validator::make($request->all(), $rules);
@@ -65,6 +80,7 @@ class ListTamuController extends Controller
             'nama' => $request->nama,
             'no_tlp' => $request->no_tlp,
             'tamu' => $request->tamu,
+            'tgl' => $request->tgl,
             'alias' => $alias
         );
 
@@ -107,6 +123,7 @@ class ListTamuController extends Controller
             'nama' => $request->nama,
             'no_tlp' => $request->no_tlp,
             'tamu' => $request->tamu,
+            'tgl' => $request->tgl,
             'alias' => $alias
         );
         ListTamu::whereId($request->hidden_id)->update($form_data);

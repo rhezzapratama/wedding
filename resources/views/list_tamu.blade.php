@@ -21,6 +21,7 @@
                                 <th width="25%">Nama Tamu</th>
                                 <th width="20%">Telephone / WA</th>
                                 <th width="20%">Tamu</th>
+                                <th width="20%">Tanggal</th>
                                 <th width="35%">Action</th>
                                 <th width="35%">Send</th>
                             </tr>
@@ -57,13 +58,21 @@
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Tamu :</label>
-                            <select class="form-control" name="tamu">
+                            <select class="form-control" name="tamu" id="tamu">
                                 <option value="">-- Pilih Tamu --</option>
                                 <option value="Ayu">Ayu</option>
                                 <option value="Mamah">Mamah</option> 
                                 <option value="Reza">Reza</option> 
                                 <option value="Ayah">Ayah</option> 
                                 <option value="Ibu">Ibu</option> 
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Tanggal :</label>
+                            <select class="form-control" name="tgl" id="tgl">
+                                <option value="">-- Pilih Tanggal --</option>
+                                <option value="02">02 Des 2023</option>
+                                <option value="16">16 Des 2023</option>
                             </select>
                         </div>
                         <br />
@@ -145,6 +154,13 @@
                 name: 'tamu'
             },
             {
+                data: 'tgl',
+                name: 'tgl',
+                render: function(data) {
+                    return data + ' Des 2023';
+                }
+            },
+            {
                 data: 'action',
                 name: 'action',
                 orderable: false
@@ -157,7 +173,13 @@
         });
 
         $('#create_record').click(function(){
+            $('#nama').val('');
+            $('#no_tlp').val('');
+            $('#hidden_id').val('');
+            $('#tamu').val('');
+            $('#tgl').val('');
             $('#action_button').val("Add");
+            $('.modal-title').text("Tambah Tamu");
             $('#action').val("Add");
             $('#formModal').modal('show');
         });
@@ -233,7 +255,19 @@
                     $('#nama').val(html.data.nama);
                     $('#no_tlp').val(html.data.no_tlp);
                     $('#hidden_id').val(html.data.id);
-                    $('.modal-title').text("Edit New Record");
+                    var tamu = html.data.tamu;
+                    $('#tamu option').each(function() {
+                        if ($(this).val() == tamu) {
+                            $(this).prop('selected', true);
+                        }
+                    });
+                    var tanggal = html.data.tgl;
+                    $('#tgl option').each(function() {
+                        if ($(this).val() == tanggal) {
+                            $(this).prop('selected', true);
+                        }
+                    });
+                    $('.modal-title').text("Edit Tamu");
                     $('#action_button').val("Edit");
                     $('#action').val("Edit");
                     $('#formModal').modal('show');
