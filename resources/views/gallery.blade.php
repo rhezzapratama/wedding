@@ -56,38 +56,37 @@ body {
 <div class="container">
 <div class="row" id="galley">
   <div class="column">
-    <img data-original="https://www.w3schools.com/w3images/wedding.jpg" src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/rocks.jpg" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/falls2.jpg" src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/paris.jpg" src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/nature.jpg" src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/mist.jpg" src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/paris.jpg" src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/1.jpg')}}" src="{{url('/template/assets/img/gallery/1.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/2.jpg')}}" src="{{url('/template/assets/img/gallery/2.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/3.jpg')}}" src="{{url('/template/assets/img/gallery/3.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/4.jpg')}}" src="{{url('/template/assets/img/gallery/4.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/5.jpg')}}" src="{{url('/template/assets/img/gallery/5.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/6.jpg')}}" src="{{url('/template/assets/img/gallery/6.jpg')}}" style="width:100%">
   </div>
   <div class="column">
-    <img data-original="https://www.w3schools.com/w3images/underwater.jpg" src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/ocean.jpg" src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/wedding.jpg" src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/mountainskies.jpg" src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/rocks.jpg" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/underwater.jpg" src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/9.jpg')}}" src="{{url('/template/assets/img/gallery/9.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/10.jpg')}}" src="{{url('/template/assets/img/gallery/10.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/11.jpg')}}" src="{{url('/template/assets/img/gallery/11.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/12.jpg')}}" src="{{url('/template/assets/img/gallery/12.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/13.jpg')}}" src="{{url('/template/assets/img/gallery/13.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/24.jpg')}}" src="{{url('/template/assets/img/gallery/24.jpg')}}" style="width:100%">
   </div>  
   <div class="column">
-  <img data-original="https://www.w3schools.com/w3images/wedding.jpg" src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/rocks.jpg" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/falls2.jpg" src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/paris.jpg" src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/nature.jpg" src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/mist.jpg" src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/paris.jpg" src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+  <img data-original="{{url('/template/assets/img/gallery/17.jpg')}}" src="{{url('/template/assets/img/gallery/17.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/18.jpg')}}" src="{{url('/template/assets/img/gallery/18.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/19.jpg')}}" src="{{url('/template/assets/img/gallery/19.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/20.jpg')}}" src="{{url('/template/assets/img/gallery/20.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/21.jpg')}}" src="{{url('/template/assets/img/gallery/21.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/22.jpg')}}" src="{{url('/template/assets/img/gallery/22.jpg')}}" style="width:100%">
   </div>
   <div class="column">
-  <img data-original="https://www.w3schools.com/w3images/underwater.jpg" src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/ocean.jpg" src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/wedding.jpg" src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/mountainskies.jpg" src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/rocks.jpg" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-    <img data-original="https://www.w3schools.com/w3images/underwater.jpg" src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/7.jpg')}}" src="{{url('/template/assets/img/gallery/7.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/8.jpg')}}" src="{{url('/template/assets/img/gallery/8.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/23.jpg')}}" src="{{url('/template/assets/img/gallery/23.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/16.jpg')}}" src="{{url('/template/assets/img/gallery/16.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/15.jpg')}}" src="{{url('/template/assets/img/gallery/15.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/14.jpg')}}" src="{{url('/template/assets/img/gallery/14.jpg')}}" style="width:100%">
+    <img data-original="{{url('/template/assets/img/gallery/6.jpg')}}" src="{{url('/template/assets/img/gallery/6.jpg')}}" style="width:100%">
   </div>
 </div>
 </div>

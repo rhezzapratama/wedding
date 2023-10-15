@@ -245,7 +245,7 @@
 						<div class="detail">
 							<h3 style="color:#34A853">Reza</h3>
 							<div class="fullname"><br>Reza Pratama, S.Kom</div>
-							<div class="bio">Putra dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
+							<div class="bio">Putra dari <br>Bapak Sarto &<br>Ibu Tuti Ratnawati</div>
 						</div>
 					@endif
 
