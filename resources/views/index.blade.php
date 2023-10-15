@@ -176,7 +176,7 @@
 		<!-- Start Index  -->
 		<div id="index" class="page-content-scroll front-page">
 			<div class="homepage-banner">
-				<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/home-banner.jpg') }}" width="720" height="484" layout="responsive"></amp-img>
+				<amp-img alt="Wedding Images" src="{{ asset('template/assets/img/home-banner.png') }}" width="720" height="484" layout="responsive"></amp-img>
 			</div>
 			<div class="hompage-text">
 				<h4 class="save-date center-text uppercase">

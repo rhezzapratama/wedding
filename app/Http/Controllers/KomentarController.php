@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Komentar;
-use App\listTamu;
+use App\ListTamu;
 use Illuminate\Support\Facades\Crypt;
 
 class KomentarController extends Controller
