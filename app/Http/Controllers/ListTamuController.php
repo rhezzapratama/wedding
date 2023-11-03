@@ -20,9 +20,13 @@ class ListTamuController extends Controller
            
             return datatables()->of(listTamu::latest('id')->get())
                     ->addColumn('action', function($data){
+                        $url_tamu = $data->alias;
+                        $url = 'http://ayudanreza.my.id/?tamu='.$url_tamu.'';
                         $button = '<button type="button" name="edit" id="'.$data->id.'" class="edit btn btn-primary btn-sm">Edit</button>';
                         $button .= '&nbsp;&nbsp;';
                         $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm">Delete</button>';
+                        $button .= '&nbsp;&nbsp;';
+                        $button .= '<a href="'.$url.'" class="btn btn-warning btn-sm" target="_blank">View</a>';
                         return $button;
                     })->addColumn('send', function($data){
                         $nama_tamu = str_replace("&","%26",$data->nama);
