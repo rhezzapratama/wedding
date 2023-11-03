@@ -15,6 +15,29 @@
                         </div>
                     @endif
                     <div class="table-responsive">
+                        <div class="form-group row">
+                            <label for="tamu" class="col-sm-2 col-form-label">Tamu Dari</label>
+                            <div class="col-md-3">
+                                <select class="form-control" id="selectTamu">
+                                    <option value="">-- Pilih Tamu --</option>
+                                    <option value="Ayu">Ayu</option>
+                                    <option value="Mamah">Mamah</option> 
+                                    <option value="Reza">Reza</option> 
+                                    <option value="Ayah">Ayah</option> 
+                                    <option value="Ibu">Ibu</option> 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="tamu" class="col-sm-2 col-form-label">Tanggal</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" id="selectTanggal">
+                                    <option value="">-- Pilih Tanggal --</option>
+                                    <option value="02">02 Des 2023</option>
+                                    <option value="16">16 Des 2023</option>
+                                </select>
+                            </div>
+                        </div>
                         <table class="table table-bordered table-striped" id="user_table">
                             <thead>
                             <tr>
@@ -113,7 +136,7 @@
 @section('externalJs')
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#user_table').DataTable({
+        var dataTable = $('#user_table').DataTable({
             processing: true,
             serverSide: true,
             order:[],
@@ -171,6 +194,24 @@
                 name: 'send',
                 orderable: false
             }]
+        });
+
+        function fillSelectOptions(columnIndex, selectId) {
+            var select = $('#' + selectId);
+            select.append('<option value="">Semua</option>');  
+            var dataInColumn = dataTable.column(columnIndex).data();
+            dataTable.column(columnIndex).data().unique().sort().each(function(data, index) {
+                select.append('<option value="' + data + '">' + data + '</option>');
+            });
+        }
+
+        fillSelectOptions(2, 'selectTamu');
+        fillSelectOptions(3, 'selectTanggal');
+
+        $('#selectTamu, #selectTanggal').on('change', function() {
+            var selectedTamu = $('#selectTamu').val();
+            var selectedTanggal = $('#selectTanggal').val();
+            dataTable.columns(2).search(selectedTamu).columns(3).search(selectedTanggal).draw();
         });
 
         $('#create_record').click(function(){
