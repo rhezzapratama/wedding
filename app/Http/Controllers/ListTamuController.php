@@ -18,7 +18,7 @@ class ListTamuController extends Controller
         if(request()->ajax())
         {
            
-            return datatables()->of(listTamu::latest()->get())
+            return datatables()->of(listTamu::orderBy('id', 'DESC')->latest()->get())
                     ->addColumn('action', function($data){
                         $button = '<button type="button" name="edit" id="'.$data->id.'" class="edit btn btn-primary btn-sm">Edit</button>';
                         $button .= '&nbsp;&nbsp;';
