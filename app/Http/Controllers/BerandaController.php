@@ -15,6 +15,7 @@ class BerandaController extends Controller
         $code_tamu = $obj->id??'';
         $alias = $obj->alias??'';
         $tgl = $obj->tgl??'02';
-        return view('index', ['tamu' => $tamu, 'code_tamu' => $code_tamu, 'alias' => $alias, 'tgl' => $tgl]);
+        $no_tlp = $obj->no_tlp??'';
+        return view('index', ['tamu' => $tamu, 'code_tamu' => $code_tamu, 'alias' => $alias, 'tgl' => $tgl, 'no_tlp' => $no_tlp]);
     }
 }

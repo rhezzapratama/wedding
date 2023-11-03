@@ -65,6 +65,7 @@ body {
                     <input type="text" name="nama" id="nama" class="form-control" readonly data-error="Please enter name." maxlength="100" required value="{{$tamu}}" />
                     <input type="hidden" name="code" id="code" value="{{$code_tamu}}">
                     <input type="hidden" name="alias" id="alias" value="{{$alias}}">
+                    <input type="hidden" name="no_tlp" id="no_tlp" value="{{$no_tlp}}">
                     <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
@@ -190,48 +191,58 @@ $(".crud-submit").click(function(e) {
     var ucapan = $('#ucapan').val();
     var code_tamu = $('#code').val();
     var alias = $('#alias').val();
+    var no_tlp = $('#no_tlp').val();
+    let no_group = ['083871595443','0816985772','081293129163'];
 
-    if (ucapan !== '' && kehadiran !== null) {
-        $.ajax({
-            dataType: 'json',
-            type: 'POST',
-            url: form_action,
-            data: {
-            nama: nama,
-            kehadiran: kehadiran,
-            ucapan: ucapan,
-            code_tamu: code_tamu,
-            alias: alias
-            },
-            beforeSend: function() {
-            $(".loading-overlay").show();
-            }
-        }).done(function(data) {
-            getPageData();
-            $(".modal").modal('hide');
-            $(".loading-overlay").hide();
-            if (data.responseCode == '00') {
-            $('#ucapan').val('');
-            $('#kehadiran').val('');
-            var toastrShown = false;
-            if (!toastrShown) {
-                    toastrShown = true;
-                    toastr.clear();
-                    toastr.success('Terima Kasih atas Ucapan dan Kehadirannya.');
-                }
-            } else {
-                if (!toastrShown) {
-                    toastrShown = true;
-                    toastr.clear();
-                    toastr.error('Maaf, Anda Bukan Tamu Undangan.', 'Danger Alert');
-                }
-            }
-        });
-    } else {
+    if(no_group.includes(no_tlp)) {
         if (!toastrShown) {
             toastrShown = true;
             toastr.clear();
-            toastr.error('Harap isi Ucapan dan Kehadiran.', 'Danger Alert');
+            toastr.error('Maaf, Anda termasuk dalam kategori Group.', 'Danger Alert');
+        }
+    } else {
+        if (ucapan !== '' && kehadiran !== null) {
+            $.ajax({
+                dataType: 'json',
+                type: 'POST',
+                url: form_action,
+                data: {
+                nama: nama,
+                kehadiran: kehadiran,
+                ucapan: ucapan,
+                code_tamu: code_tamu,
+                alias: alias
+                },
+                beforeSend: function() {
+                $(".loading-overlay").show();
+                }
+            }).done(function(data) {
+                getPageData();
+                $(".modal").modal('hide');
+                $(".loading-overlay").hide();
+                if (data.responseCode == '00') {
+                $('#ucapan').val('');
+                $('#kehadiran').val('');
+                var toastrShown = false;
+                if (!toastrShown) {
+                        toastrShown = true;
+                        toastr.clear();
+                        toastr.success('Terima Kasih atas Ucapan dan Kehadirannya.');
+                    }
+                } else {
+                    if (!toastrShown) {
+                        toastrShown = true;
+                        toastr.clear();
+                        toastr.error('Maaf, Anda Bukan Tamu Undangan.', 'Danger Alert');
+                    }
+                }
+            });
+        } else {
+            if (!toastrShown) {
+                toastrShown = true;
+                toastr.clear();
+                toastr.error('Harap isi Ucapan dan Kehadiran.', 'Danger Alert');
+            }
         }
     }
 });

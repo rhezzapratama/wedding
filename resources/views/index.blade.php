@@ -145,7 +145,7 @@
 									<p style="color:black">wedding date on Dec {{$tgl}}, 2023</p>
 									<p style="color:black">wedding time at @if($tgl == '02') 08.00 - 13.00 @else 09.00 - 20.00 @endif</p>
 								</div>
-								<i class="fa fa-search icon" style="background-color: Transparent; border:none;"></i>
+								<i class="icon" style="background-color: Transparent; border:none;"></i>
 							</div>
 						</div>
 					</div>
@@ -522,7 +522,7 @@
 		<div class="content">
 			<amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
 			<div class="gallery gallery-square full-bottom">
-				<iframe src="{{url('komentar?tamu='.$tamu.'&'.'code_tamu='.$code_tamu.'&'.'alias='.$alias)}}" allowfullscreen="" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">Your browser isn't compatible</iframe>
+				<iframe src="{{url('komentar?tamu='.$tamu.'&'.'code_tamu='.$code_tamu.'&'.'no_tlp='.$no_tlp.'&'.'alias='.$alias)}}" allowfullscreen="" style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;">Your browser isn't compatible</iframe>
 			</div>
 		</div>
 		<div class="footer-akad content">
