@@ -116,6 +116,7 @@
         $('#user_table').DataTable({
             processing: true,
             serverSide: true,
+            order:[],
             initComplete: function () {
                 this.api()
                     .columns()
