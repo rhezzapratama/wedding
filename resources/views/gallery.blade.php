@@ -34,7 +34,13 @@ body {
   padding: 0 4px;
 }
 
-.column img {
+.column-2 {
+  -ms-flex: 100%; /* IE 10 */
+  flex: 100%;
+  padding: 0 4px;
+}
+
+.column, img {
   margin-top: 8px;
   vertical-align: middle;
 }
@@ -43,50 +49,54 @@ body {
 </head>
 <body>
 
-<!-- Header -->
-<!-- <div class="header" id="myHeader">
-  <h1>Image Grid</h1>
-  <p>Click on the buttons to change the grid view.</p>
-  <button class="btn" onclick="one()">1</button>
-  <button class="btn active" onclick="two()">2</button>
-  <button class="btn" onclick="four()">4</button>
-</div> -->
-
 <!-- Photo Grid -->
 <div class="container">
 <div class="row" id="galley">
   <div class="column">
-    <img data-original="{{url('/template/assets/img/gallery/1.jpg')}}" src="{{url('/template/assets/img/gallery/1.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/2.jpg')}}" src="{{url('/template/assets/img/gallery/2.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/3.jpg')}}" src="{{url('/template/assets/img/gallery/3.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/4.jpg')}}" src="{{url('/template/assets/img/gallery/4.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/5.jpg')}}" src="{{url('/template/assets/img/gallery/5.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/6.jpg')}}" src="{{url('/template/assets/img/gallery/6.jpg')}}" style="width:100%">
+    <img alt='1.jpg' data-original="{{url('/template/assets/img/gallery/1.jpg')}}" src="{{url('/template/assets/img/gallery/1.jpg')}}" style="width:100%">
+    <img alt='2.jpg' data-original="{{url('/template/assets/img/gallery/2.jpg')}}" src="{{url('/template/assets/img/gallery/2.jpg')}}" style="width:100%">
+    <img alt='23.jpg' data-original="{{url('/template/assets/img/gallery/25.jpg')}}" src="{{url('/template/assets/img/gallery/25.jpg')}}" style="width:100%">
+    <img alt='33.jpg' data-original="{{url('/template/assets/img/gallery/33.jpg')}}" src="{{url('/template/assets/img/gallery/33.jpg')}}" style="width:100%">
+    <img alt='5.jpg' data-original="{{url('/template/assets/img/gallery/5.jpg')}}" src="{{url('/template/assets/img/gallery/5.jpg')}}" style="width:100%">
+    <img alt='24.jpg' data-original="{{url('/template/assets/img/gallery/24.jpg')}}" src="{{url('/template/assets/img/gallery/24.jpg')}}" style="width:100%">
   </div>
   <div class="column">
-    <img data-original="{{url('/template/assets/img/gallery/9.jpg')}}" src="{{url('/template/assets/img/gallery/9.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/10.jpg')}}" src="{{url('/template/assets/img/gallery/10.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/11.jpg')}}" src="{{url('/template/assets/img/gallery/11.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/12.jpg')}}" src="{{url('/template/assets/img/gallery/12.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/13.jpg')}}" src="{{url('/template/assets/img/gallery/13.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/24.jpg')}}" src="{{url('/template/assets/img/gallery/24.jpg')}}" style="width:100%">
+    <img alt='3.jpg' data-original="{{url('/template/assets/img/gallery/3.jpg')}}" src="{{url('/template/assets/img/gallery/3.jpg')}}" style="width:100%">
+    <img alt='10.jpg' data-original="{{url('/template/assets/img/gallery/10.jpg')}}" src="{{url('/template/assets/img/gallery/10.jpg')}}" style="width:100%">
+    <img alt='29.jpg' data-original="{{url('/template/assets/img/gallery/29.jpg')}}" src="{{url('/template/assets/img/gallery/29.jpg')}}" style="width:100%">
+    <img alt='26.jpg' data-original="{{url('/template/assets/img/gallery/26.jpg')}}" src="{{url('/template/assets/img/gallery/26.jpg')}}" style="width:100%">
+    <img alt='13.jpg' data-original="{{url('/template/assets/img/gallery/13.jpg')}}" src="{{url('/template/assets/img/gallery/13.jpg')}}" style="width:100%">
+    <img alt='6.jpg' data-original="{{url('/template/assets/img/gallery/6.jpg')}}" src="{{url('/template/assets/img/gallery/6.jpg')}}" style="width:100%">
+  </div>  
+  <div class="column-2">
+    <img alt='37.jpg' data-original="{{url('/template/assets/img/gallery/37.jpg')}}" src="{{url('/template/assets/img/gallery/37.jpg')}}" style="width:100%">
   </div>  
   <div class="column">
-  <img data-original="{{url('/template/assets/img/gallery/17.jpg')}}" src="{{url('/template/assets/img/gallery/17.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/18.jpg')}}" src="{{url('/template/assets/img/gallery/18.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/19.jpg')}}" src="{{url('/template/assets/img/gallery/19.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/20.jpg')}}" src="{{url('/template/assets/img/gallery/20.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/21.jpg')}}" src="{{url('/template/assets/img/gallery/21.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/22.jpg')}}" src="{{url('/template/assets/img/gallery/22.jpg')}}" style="width:100%">
+    <img alt='30.jpg' data-original="{{url('/template/assets/img/gallery/30.jpg')}}" src="{{url('/template/assets/img/gallery/30.jpg')}}" style="width:100%; margin-top:0;">
+    <img alt='34.jpg' data-original="{{url('/template/assets/img/gallery/34.jpg')}}" src="{{url('/template/assets/img/gallery/34.jpg')}}" style="width:100%">
+    <img alt='7.jpg' data-original="{{url('/template/assets/img/gallery/7.jpg')}}" src="{{url('/template/assets/img/gallery/7.jpg')}}" style="width:100%">
+    <img alt='21.jpg' data-original="{{url('/template/assets/img/gallery/21.jpg')}}" src="{{url('/template/assets/img/gallery/21.jpg')}}" style="width:100%">
+    <img alt='32.jpg' data-original="{{url('/template/assets/img/gallery/32.jpg')}}" src="{{url('/template/assets/img/gallery/32.jpg')}}" style="width:100%">
+    <img alt='35.jpg' data-original="{{url('/template/assets/img/gallery/35.jpg')}}" src="{{url('/template/assets/img/gallery/35.jpg')}}" style="width:100%">
   </div>
   <div class="column">
-    <img data-original="{{url('/template/assets/img/gallery/7.jpg')}}" src="{{url('/template/assets/img/gallery/7.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/8.jpg')}}" src="{{url('/template/assets/img/gallery/8.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/23.jpg')}}" src="{{url('/template/assets/img/gallery/23.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/16.jpg')}}" src="{{url('/template/assets/img/gallery/16.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/15.jpg')}}" src="{{url('/template/assets/img/gallery/15.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/14.jpg')}}" src="{{url('/template/assets/img/gallery/14.jpg')}}" style="width:100%">
-    <img data-original="{{url('/template/assets/img/gallery/6.jpg')}}" src="{{url('/template/assets/img/gallery/6.jpg')}}" style="width:100%">
+    <img alt='28.jpg' data-original="{{url('/template/assets/img/gallery/28.jpg')}}" src="{{url('/template/assets/img/gallery/28.jpg')}}" style="width:100%; margin-top:0;">
+    <img alt='31.jpg' data-original="{{url('/template/assets/img/gallery/31.jpg')}}" src="{{url('/template/assets/img/gallery/31.jpg')}}" style="width:100%">
+    <img alt='8.jpg' data-original="{{url('/template/assets/img/gallery/8.jpg')}}" src="{{url('/template/assets/img/gallery/8.jpg')}}" style="width:100%">
+    <img alt='16.jpg' data-original="{{url('/template/assets/img/gallery/16.jpg')}}" src="{{url('/template/assets/img/gallery/16.jpg')}}" style="width:100%">
+    <img alt='27.jpg' data-original="{{url('/template/assets/img/gallery/27.jpg')}}" src="{{url('/template/assets/img/gallery/27.jpg')}}" style="width:100%">
+    <img alt='36.jpg' data-original="{{url('/template/assets/img/gallery/36.jpg')}}" src="{{url('/template/assets/img/gallery/36.jpg')}}" style="width:100%">
+  </div>
+  <div class="column-2">
+    <img alt='38.jpg' data-original="{{url('/template/assets/img/gallery/38.jpg')}}" src="{{url('/template/assets/img/gallery/38.jpg')}}" style="width:100%">
+  </div>  
+  <div class="column">
+    <img alt='9.jpg' data-original="{{url('/template/assets/img/gallery/9.jpg')}}" src="{{url('/template/assets/img/gallery/9.jpg')}}" style="width:100%; margin-top:0;">
+    <img alt='17.jpg' data-original="{{url('/template/assets/img/gallery/17.jpg')}}" src="{{url('/template/assets/img/gallery/17.jpg')}}" style="width:100%">
+  </div>
+  <div class="column">
+    <img alt='12.jpg' data-original="{{url('/template/assets/img/gallery/12.jpg')}}" src="{{url('/template/assets/img/gallery/12.jpg')}}" style="width:100%; margin-top:0;">
+    <img alt='22.jpg' data-original="{{url('/template/assets/img/gallery/22.jpg')}}" src="{{url('/template/assets/img/gallery/22.jpg')}}" style="width:100%">
   </div>
 </div>
 </div>
@@ -139,17 +149,16 @@ function two() {
 
 </script>
 <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      var galley = document.getElementById('galley');
-      var viewer = new Viewer(galley, {
-        url: 'data-original',
-        title: function (image) {
-          return image.alt + ' (' + (this.index + 1) + '/' + this.length + ')';
-        },
-      });
+  window.addEventListener('DOMContentLoaded', function () {
+    var galley = document.getElementById('galley');
+    var viewer = new Viewer(galley, {
+      url: 'data-original',
+      title: function (image) {
+        return image.alt + ' (' + (this.index + 1) + '/' + this.length + ')';
+      },
     });
-  </script>
-
+  });
+</script>
 
 </body>
 </html>

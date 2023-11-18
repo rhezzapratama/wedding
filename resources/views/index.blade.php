@@ -12,7 +12,7 @@
 	<meta name="description" content="Pernikahan Ayu dan Reza via web mobile" />
 	<meta property="og:title" content="Invitation Wedding - Ayu & Reza">
 	<meta property="og:description" content="Pernikahan Ayu dan Reza via web mobile">
-	{{-- <meta property="og:image" content="assets/img/home-icon.jpg"> --}}
+	<meta property="og:image" content="{{url('/template/assets/img/home-icon.jpg')}}">
 
 	<script async src="{{ asset('template/assets/amp/js/v0.js') }}"></script>
 	<script async custom-element="amp-carousel" src="{{ asset('template/assets/amp/js/amp-carousel-0.1.js') }}"></script>
