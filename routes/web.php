@@ -13,11 +13,13 @@
 
 Route::get('/', 'BerandaController@index');
 Route::get('/tamu', 'BerandaController@tamu');
+Route::post('tamu/update', 'BerandaController@update');
 
 Auth::routes(['register'=> false, 'reset'=>false]); 
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('list-tamu', 'ListTamuController');
+Route::post('list-tamu/search', 'ListTamuController@search')->name('list-tamu.search');
 Route::post('list-tamu/update', 'ListTamuController@update')->name('list-tamu.update');
 Route::get('list-tamu/destroy/{id}', 'ListTamuController@destroy');
 Route::get('komentar', 'KomentarController@home');

@@ -160,7 +160,7 @@
 					Mohon maaf apabila ada kesalahan dalam penulisan nama atau gelar
 				</span>
 				<div class="lihat-btn" style="margin-top: 10px;">
-					<a href="#" id="remove_splash" data-name="{{$tamu}}"><i class="fa fa-gift"></i> Lihat Detail Undangan</a>
+					<a href="#" id="remove_splash" data-name="{{$tamu}}" data-code="{{$code_tamu}}" data-read="1"><i class="fa fa-gift"></i> Lihat Detail Undangan</a>
 				</div>
 			</div>
 		</div>
@@ -258,7 +258,7 @@
 						<div class="detail">
 							<h3 style="color:#34A853">Reza</h3>
 							<div class="fullname"><br>Reza Pratama, S.Kom</div>
-							<div class="bio">Putra dari <br>Bapak Sarto &<br>Ibu Tuti Ratna Wati</div>
+							<div class="bio">Putra dari <br>Bapak Sarto &<br>Ibu Tuti Ratnawati</div>
 						</div>
 					@else
 						<div class="img">
@@ -637,13 +637,27 @@
 		}
 
 		$("#remove_splash").on('click', function() {
+			var id = $(this).data("code");
+			var read = $(this).data("read");
 			if($(this).data("name") == "Tamu Undangan"){
 				alert('Maaf, Anda bukan Tamu Undangan');
 			} else {
 				$(".splash").attr('style', 'display:none; ');
 				scrollenabled();
 				playAudio();
+				$.ajax({
+					type: 'POST',
+					url: "{{URL::to('tamu/update')}}",
+					data: { 
+						id: id,
+						read: read,
+						_token: '{!! csrf_token() !!}',
+                	},
+					success: function(data) {
+					}
+            	});
 			}
+
 		});
 
 		wow = new WOW({

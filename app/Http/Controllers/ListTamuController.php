@@ -13,11 +13,13 @@ class ListTamuController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
         if(request()->ajax())
         {
-           
+            if ($request->input('read') == '1') {
+                listTamu::where('read', '1');
+            }
             return datatables()->of(listTamu::latest('id')->get())
                     ->addColumn('action', function($data){
                         $url_tamu = $data->alias;
@@ -57,6 +59,11 @@ class ListTamuController extends Controller
                     ->make(true);
         }
         return view('list_tamu');
+    }
+
+    public function search(Request $request)
+    {
+        dd($request->all());
     }
 
     public function store(Request $request)

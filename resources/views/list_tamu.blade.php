@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-9">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">List Tamu
                     <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm float-right">Tambah Tamu</button>
@@ -15,27 +15,44 @@
                         </div>
                     @endif
                     <div class="table-responsive">
-                        <div class="form-group row">
-                            <label for="tamu" class="col-sm-2 col-form-label">Tamu Dari</label>
-                            <div class="col-md-3">
-                                <select class="form-control" id="selectTamu">
-                                    <option value="">-- Pilih Tamu --</option>
-                                    <option value="Ayu">Ayu</option>
-                                    <option value="Mamah">Mamah</option> 
-                                    <option value="Reza">Reza</option> 
-                                    <option value="Ayah">Ayah</option> 
-                                    <option value="Ibu">Ibu</option> 
-                                </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="tamu" class="col-sm-3 col-form-label">Tamu Dari</label>
+                                    <div class="col-md-9">
+                                        <select class="form-control" id="selectTamu">
+                                            <option value="">-- Pilih Tamu --</option>
+                                            <option value="Ayu">Ayu</option>
+                                            <option value="Mamah">Mamah</option> 
+                                            <option value="Reza">Reza</option> 
+                                            <option value="Ayah">Ayah</option> 
+                                            <option value="Ibu">Ibu</option> 
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="tamu" class="col-sm-3 col-form-label">Tanggal</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="selectTanggal">
+                                            <option value="">-- Pilih Tanggal --</option>
+                                            <option value="02">02 Des 2023</option>
+                                            <option value="16">16 Des 2023</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="tamu" class="col-sm-2 col-form-label">Tanggal</label>
-                            <div class="col-sm-3">
-                                <select class="form-control" id="selectTanggal">
-                                    <option value="">-- Pilih Tanggal --</option>
-                                    <option value="02">02 Des 2023</option>
-                                    <option value="16">16 Des 2023</option>
-                                </select>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <h1 class="text-center" id="totalRead"></h1>
+                                    <div ></div>
+                                    <button class="btn btn-primary" id="filterRead" style="border-radius:0px 0px .25rem .25rem;">read</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <h1 class="text-center" id="totalUnread"></h1>
+                                    <button class="btn btn-default" id="filterUnread" style="border-radius:0px 0px .25rem .25rem;">unread</button>
+                                </div>
                             </div>
                         </div>
                         <table class="table table-bordered table-striped" id="user_table">
@@ -136,6 +153,7 @@
 @section('externalJs')
 <script type="text/javascript">
     $(document).ready(function(){
+        read();
         var dataTable = $('#user_table').DataTable({
             processing: true,
             serverSide: true,
@@ -166,8 +184,14 @@
                 url: "{{ route('list-tamu.index') }}",
             },
             columns:[{
-                data: 'nama',
-                name: 'nama'
+                data: null,
+                render: function (data, type, row) {
+                    if (data.read == '1') {
+                        return '<i class="fa fa-check-circle" style="color:#007bff;"></i> ' + data.nama;
+                    } else {
+                        return '<i class="fa fa-check" style="color: gray;"></i> ' + data.nama;
+                    }
+                }
             },
             {
                 data: 'no_tlp',
@@ -193,7 +217,8 @@
                 data: 'send',
                 name: 'send',
                 orderable: false
-            }]
+            }
+        ]
         });
 
         function fillSelectOptions(columnIndex, selectId) {
@@ -212,6 +237,45 @@
             var selectedTamu = $('#selectTamu').val();
             var selectedTanggal = $('#selectTanggal').val();
             dataTable.columns(2).search(selectedTamu).columns(3).search(selectedTanggal).draw();
+        });
+
+        function read(){
+            $.ajax({
+                url: "{{ route('list-tamu.index') }}",
+                method: 'GET',
+                success: function(response) {
+                    const dataArray = response.data || [];
+                    if (Array.isArray(dataArray)) {
+                        const totalRead = dataArray.filter(item => item.read == '1').length;
+                        const totalUnread = dataArray.filter(item => item.read == '').length;
+                        document.getElementById('totalRead').innerHTML = `${totalRead}`;
+                        document.getElementById('totalUnread').innerHTML = `${totalUnread}`;
+                    } else {
+                        document.getElementById('totalRead').innerHTML = '0';
+                        document.getElementById('totalUnread').innerHTML = '0';
+                    }
+                },
+                error: function(error) {
+                    console.error('Gagal mengambil data:', error);
+                }
+            });
+        }
+
+        $('#filterRead').on('click', function() {
+            $.ajax({
+                url: "{{ route('list-tamu.search') }}",
+                type: "POST",
+                data: { read: '1' },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(xhr, status, error) {
+                    console.log(error);
+                }
+            });
         });
 
         $('#create_record').click(function(){
