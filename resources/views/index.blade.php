@@ -560,6 +560,23 @@
 			}
 		}
 
+		$("body").on("contextmenu",function(e){
+			alert('Nikmati aja ya kawan, tidak perlu dicari tau :P');
+			return false;
+		});
+
+		window.addEventListener("keydown", function(event) {
+			if (event.key === "F12" || event.key === "F11" || event.key === "F10" || event.key === "F9") {
+				alert('Nikmati aja ya kawan, tidak perlu dicari tau :P');
+				event.preventDefault();
+			}
+
+			if (event.ctrlKey && event.key === "u") {
+				alert('Nikmati aja ya kawan, tidak perlu dicari tau :P');
+        		event.preventDefault();
+    		}
+		});
+
 		var bcaToastrShown = false;
 		var briToastrShown = false;
 
