@@ -92,7 +92,8 @@ class ListTamuController extends Controller
             'no_tlp' => $request->no_tlp,
             'tamu' => $request->tamu,
             'tgl' => $request->tgl,
-            'alias' => $alias
+            'alias' => $alias,
+            'read' => ''
         );
 
         ListTamu::create($form_data);
