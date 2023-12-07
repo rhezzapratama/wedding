@@ -480,19 +480,48 @@
 				</h3>
 			</div>
 			<div class="content center-text wow bounceIn" data-wow-offset="150">
-				<h5>BCA</h5>
-				<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
-				<div id="rekbca" style="margin-bottom:6px;">2100130826</div>
-				<div style="margin-top:6px;">
-					<button class="btn btn-sm btn-bca" onclick="bcarek()" style="background:#34A853 !important; color:white!important;"><i class="fa fa-copy"></i>&nbsp; Salin No Rekening</button>
-				</div>
+				@if($tgl == '02')
+					<h5>BCA</h5>
+					<div style="margin-bottom:6px;">Sri Rahayu Gantini</div>
+					<div id="rekbca" style="margin-bottom:6px;">2100130826</div>
+					<div style="margin-top:6px;">
+						<button class="btn btn-sm btn-bca" onclick="bcarek()" style="background:#34A853 !important; color:white!important;"><i class="fa fa-copy"></i>&nbsp; Salin No Rekening</button>
+					</div>
+				@else
+					@if($tamu != 'Keluarga Ihsan Regency')
+						<h5>MANDIRI</h5>
+						<div style="margin-bottom:6px;">Sarto</div>
+						<div id="rekmandirii" style="margin-bottom:6px;">1190004993703</div>
+						<div style="margin-top:6px;">
+							<button class="btn btn-sm btn-mandirii" onclick="mandiriirek()" style="background:#0275d8!important; color:white!important;" value="204601000610534"><i class="fa fa-copy"></i>&nbsp; Salin No Rekening</button>
+						</div>
+					@else
+						<h5>BRI</h5>
+						<div style="margin-bottom:6px;">Reza Pratama</div>
+						<div id="rekbri" style="margin-bottom:6px;">204601000610534</div>
+						<div style="margin-top:6px;">
+							<button class="btn btn-sm btn-bri" onclick="brirek()" style="background:#0275d8!important; color:white!important;" value="204601000610534"><i class="fa fa-copy"></i>&nbsp; Salin No Rekening</button>
+						</div>
+					@endif
+				@endif
 				<br/>
-				<h5>BRI</h5>
-				<div style="margin-bottom:6px;">Reza Pratama</div>
-				<div id="rekbri" style="margin-bottom:6px;">204601000610534</div>
-				<div style="margin-top:6px;">
-					<button class="btn btn-sm btn-bri" onclick="brirek()" style="background:#EA4335!important; color:white!important;" value="204601000610534"><i class="fa fa-copy"></i>&nbsp; Salin No Rekening</button>
-				</div>
+				@if($tgl == '02')
+					<h5>BRI</h5>
+					<div style="margin-bottom:6px;">Reza Pratama</div>
+					<div id="rekbri" style="margin-bottom:6px;">204601000610534</div>
+					<div style="margin-top:6px;">
+						<button class="btn btn-sm btn-bri" onclick="brirek()" style="background:#EA4335!important; color:white!important;" value="204601000610534"><i class="fa fa-copy"></i>&nbsp; Salin No Rekening</button>
+					</div>
+				@else
+					@if($tamu != 'Keluarga Ihsan Regency')
+						<h5>MANDIRI</h5>
+						<div style="margin-bottom:6px;">Tuti Ratnawati</div>
+						<div id="rekmandiri" style="margin-bottom:6px;">1030004294308</div>
+						<div style="margin-top:6px;">
+							<button class="btn btn-sm btn-mandiri" onclick="mandirirek()" style="background:#34A853 !important; color:white!important;"><i class="fa fa-copy"></i>&nbsp; Salin No Rekening</button>
+						</div>
+					@endif
+				@endif
 			</div>
 			<br>
 			@if($tgl == '02')
@@ -579,6 +608,8 @@
 
 		var bcaToastrShown = false;
 		var briToastrShown = false;
+		var mandiriToastrShown = false;
+		var mandiriiToastrShown = false;
 
 		function bcarek() {
 			if (!bcaToastrShown) {
@@ -592,6 +623,38 @@
 					toastr.clear();
 					toastr.success('No. Rekening BCA, Copied!', 'Success Alert');
 					bcaToastrShown = true;
+				});
+			}
+		}
+
+		function mandirirek() {
+			if (!mandiriToastrShown) {
+				var clipboard = new ClipboardJS('.btn-mandiri', {
+					target: function () {
+						return document.querySelector('#rekmandiri');
+					},
+				});
+
+				clipboard.on('success', function (e) {
+					toastr.clear();
+					toastr.success('No. Rekening Mandiri, Copied!', 'Success Alert');
+					mandiriToastrShown = true;
+				});
+			}
+		}
+
+		function mandiriirek() {
+			if (!mandiriiToastrShown) {
+				var clipboard = new ClipboardJS('.btn-mandirii', {
+					target: function () {
+						return document.querySelector('#rekmandirii');
+					},
+				});
+
+				clipboard.on('success', function (e) {
+					toastr.clear();
+					toastr.success('No. Rekening Mandiri, Copied!', 'Success Alert');
+					mandiriiToastrShown = true;
 				});
 			}
 		}
